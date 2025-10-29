@@ -1,0 +1,143 @@
+/* ========================================
+   RESET Y ESTILOS BASE
+   ======================================== */
+
+/* Reset universal */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML base */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Body */
+body {
+  font-family: var(--font-main);
+  background: var(--color-white);
+  color: var(--color-text);
+  overflow-x: hidden;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Accesibilidad: Focus visible */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   TIPOGRAFÍA
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 2.5rem);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-black);
+}
+
+h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   ENLACES BASE
+   ======================================== */
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-bg-lighter);
+  border-radius: var(--border-radius-sm);
+  display: inline-block;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+  background: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 184, 150, 0.4);
+}
+
+a:visited {
+  color: var(--color-text);
+}
+
+/* ========================================
+   IMÁGENES
+   ======================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optimización de imágenes (sin propiedades inválidas) */
+.gallery-item img,
+.featured-img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reducir movimiento para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
