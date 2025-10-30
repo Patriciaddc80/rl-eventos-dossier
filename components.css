@@ -19,7 +19,7 @@
 
 #servicios {
   overflow-x: hidden;
-  overflow-y: visible;
+  overflow-y: hidden;
 }
 
 #servicios .container {
@@ -755,7 +755,7 @@ ease;
 
   .services-page-content {
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
   }
 
   .pricing-card-inline ul {
@@ -864,7 +864,7 @@ ease;
 
   .services-page-content {
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
   }
 
   .pricing-card-inline ul {
