@@ -17,6 +17,15 @@
     max-width: 100%;
 }
 
+#servicios {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+#servicios .container {
+  overflow-x: hidden;
+}
+
 .service-card {
   background: var(--color-white);
   padding: 10px;
@@ -744,6 +753,19 @@ ease;
     margin-bottom: 20px;
   }
 
+  .services-page-content {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .pricing-card-inline ul {
+    text-align: center;
+  }
+
+  .pricing-card-inline li {
+    text-align: center;
+  }
+
   .separator-line {
     width: 80px;
   }
@@ -838,6 +860,19 @@ ease;
   .separator-line {
     width: 60px;
     height: 2px;
+  }
+
+  .services-page-content {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  .pricing-card-inline ul {
+    text-align: center;
+  }
+
+  .pricing-card-inline li {
+    text-align: center;
   }
 
   .pricing-card-inline {
@@ -1093,10 +1128,9 @@ ease;
 
 .contact-info p {
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   border-bottom: 1px solid #d4af37;
   font-weight: 500;
-  margin-bottom: 10px;
 }
 
 .contact-item {
@@ -1112,6 +1146,21 @@ ease;
 
 .contact-item a {
   text-align: center;
+}
+
+/* Grid para Instagram y WhatsApp */
+.contact-social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 400px;
+  margin: 15px auto;
+  width: 100%;
+}
+
+.contact-social-grid .contact-item {
+  display: flex;
+  justify-content: center;
 }
 
 /* Centrado en móvil */

@@ -115,7 +115,7 @@ const pageContents = [
       <div class="pricing-grid">
         <div class="pricing-card">
           <h3>¿POR QUÉ NECESITÁIS EL SERVICIO INTEGRAL?</h3>
-          <ul>
+          <ul class="pricing-card-list">
             <li>Porque no tenéis tiempo de organizar vuestra boda.</li>
             <li>Queréis un servicio profesional completo.</li>
             <li>Deseáis una boda diferente y original.</li>
@@ -123,7 +123,7 @@ const pageContents = [
             <li>Necesitáis todo el asesoramiento y ayuda profesional.</li>
           </ul>
           <h4>¿CÓMO PODEMOS AYUDAROS?</h4>
-          <ul>
+          <ul class="pricing-card-list"s>
             <li>Reunión previa</li>
             <li>Check list completo</li>
             <li>Calendario de tareas</li>
@@ -136,7 +136,7 @@ const pageContents = [
         
         <div class="pricing-card">
           <h3>ASESORAMIENTO Y COORDINACIÓN DEL DÍA B</h3>
-          <ul>
+          <ul class="pricing-card-list">
             <li>Creación de concepto visual</li>
             <li>Moodboard y paleta de colores</li>
             <li>Montaje y desmontaje</li>
@@ -158,7 +158,7 @@ Formaremos parte de su equipo durante todos estos meses, elaborando tanto la age
 
         <div class="pricing-card">
           <h3>COORDINACIÓN DEL DÍA B</h3>
-          <ul>
+          <ul class="pricing-card-list">
             <li>Supervisión de proveedores</li>
             <li>Control de tiempos</li>
             <li>Gestión de imprevistos</li>
@@ -229,7 +229,7 @@ A tres meses de la boda, comenzamos a poner en marcha todos los preparativos: El
         <div class="pack-grid-inline">
           <div class="pack-card-inline">
             <h3>Pack Básico</h3>
-            <ul>
+            <ul class="pricing-card-list">
               <li>Coordinación del día</li>
               <li>Supervisión de proveedores</li>
               <li>Control de tiempos</li>
@@ -241,7 +241,7 @@ A tres meses de la boda, comenzamos a poner en marcha todos los preparativos: El
 
           <div class="pack-card-inline">
             <h3>Pack Completo</h3>
-            <ul>
+            <ul class="pricing-card-list">
               <li>Organización integral</li>
               <li>Diseño y decoración</li>
               <li>Coordinación del día</li>
@@ -255,7 +255,7 @@ A tres meses de la boda, comenzamos a poner en marcha todos los preparativos: El
           <div class="pack-card-inline pack-featured-inline">
             <div class="pack-badge-inline">Popular</div>
             <h3>Pack Premium</h3>
-            <ul>
+            <ul class="pricing-card-list">
               <li>Todo el Pack Completo</li>
               <li>Invitaciones personalizadas</li>
               <li>Noche para novios Deluxe</li>
