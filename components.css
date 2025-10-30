@@ -1287,3 +1287,14 @@ ease;
     margin: 0 3px;
   }
 }
+
+/* ========================================
+   FOOTER VISIBILITY RULES
+   ======================================== */
+@media (min-width: 769px) {
+  .mobile-footer { display: none; }
+}
+
+@media (max-width: 768px) {
+  .mobile-footer { display: block; }
+}
