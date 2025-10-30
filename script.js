@@ -398,7 +398,7 @@ A tres meses de la boda, comenzamos a poner en marcha todos los preparativos: El
             <img src="assets/material-img/javier_julia-106.jpg" alt="Boda Elegante 3" loading="lazy">
           </div>
            <div class="gallery-item">
-            <img src="assets/material-img/IMG_0452.JPG" alt="Boda Elegante 3" loading="lazy">
+            <img src="assets/material-img/IMG_0452.jpg" alt="Boda Elegante 3" loading="lazy">
           </div>
         </div>
       </div>
@@ -421,10 +421,10 @@ A tres meses de la boda, comenzamos a poner en marcha todos los preparativos: El
             <img src="assets/material-img/718.jpg" alt="Celebración Especial 1" loading="lazy">
           </div>
           <div class="gallery-item">
-            <img src="assets/material-img/IMG_2083.JPG" alt="Celebración Especial 2" loading="lazy">
+            <img src="assets/material-img/IMG_2083.jpg" alt="Celebración Especial 2" loading="lazy">
           </div>
           <div class="gallery-item">
-            <img src="assets/material-img/IMG_2084.JPG" alt="Celebración Especial 3" loading="lazy">
+            <img src="assets/material-img/IMG_2084.jpg" alt="Celebración Especial 3" loading="lazy">
           </div>
         </div>
       </div>
@@ -447,10 +447,10 @@ A tres meses de la boda, comenzamos a poner en marcha todos los preparativos: El
             <img src="assets/material-img/javier_julia-866.jpg" alt="Momento Único 1" loading="lazy">
           </div>
           <div class="gallery-item">
-            <img src="assets/material-img/IMG_0446.JPG" alt="Momento Único 2" loading="lazy">
+            <img src="assets/material-img/IMG_0446.jpg" alt="Momento Único 2" loading="lazy">
           </div>
           <div class="gallery-item">
-            <img src="assets/material-img/IMG_0445.JPG" alt="Momento Único 3" loading="lazy">
+            <img src="assets/material-img/IMG_0445.jpg" alt="Momento Único 3" loading="lazy">
           </div>
         </div>
       </div>
@@ -500,7 +500,7 @@ A tres meses de la boda, comenzamos a poner en marcha todos los preparativos: El
             <img src="assets/material-img/1227.jpg" alt="Detalle Perfecto 2" loading="lazy">
           </div>
           <div class="gallery-item">
-            <img src="assets/material-img/IMG_0447.JPG" alt="Detalle Perfecto 3" loading="lazy">
+            <img src="assets/material-img/IMG_0447.jpg" alt="Detalle Perfecto 3" loading="lazy">
           </div>
         </div>
       </div>
