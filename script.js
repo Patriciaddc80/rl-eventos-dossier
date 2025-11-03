@@ -113,7 +113,7 @@ const pageContents = [
         </div>
         <div class="montaje-content-centered">
           <div class="montaje-content-box">
-            <p>Que se centra en la colocación, distribución y montaje de elementos decorativos, detalles personalizados, centros de mesas, señalización, regalos y otros elementos decorativos en el lugar del evento.</p>
+            <p>Este servicio se centra en la colocación, distribución y montaje de elementos decorativos, detalles personalizados, centros de mesas, señalización, regalos y otros elementos decorativos en el lugar del evento.</p>
             
             <h3>Características de este servicio</h3>
             
