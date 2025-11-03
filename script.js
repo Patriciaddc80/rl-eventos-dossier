@@ -106,6 +106,32 @@ const pageContents = [
   },
   {
     right: `
+      <div class="page-content-wrapper montaje-page-wrapper">
+        <h2 class="page-title">EL SERVICIO DE MONTAJE</h2>
+        <div class="page-separator">
+          <div class="separator-line"></div>
+        </div>
+        <div class="montaje-content-centered">
+          <div class="montaje-content-box">
+            <p>Que se centra en la colocación, distribución y montaje de elementos decorativos, detalles personalizados, centros de mesas, señalización, regalos y otros elementos decorativos en el lugar del evento.</p>
+            
+            <h3>Características de este servicio</h3>
+            
+            <h4>Foco exclusivo en montaje</h4>
+            <p>La función principal es la colocación y montaje de todos los detalles y decoración en su lugar correspondiente días o horas antes del evento.</p>
+            
+            <h4>Responsabilidad en la logística</h4>
+            <p>Se encarga de realizar la distribución correcta de los detalles, mesas, centros, señalización, rincón de invitados, etc., asegurando que todo quede en su sitio y con la estética deseada.</p>
+            
+            <h4>Supervisión durante la instalación</h4>
+            <p>Supervisan y coordinan para que el montaje se realice en tiempo y forma, siguiendo las indicaciones y planos del diseño de decoración.</p>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  {
+    right: `
       <div class="pricing-page-content">
       <h2 class="page-title">PRECIOS Y SERVICIOS</h2>
       <div class="page-separator">
