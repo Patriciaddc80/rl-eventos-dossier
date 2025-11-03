@@ -322,6 +322,15 @@
   margin-top: 3%;
 }
 
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+  .price-tag.consultar-btn {
+    width: 60% !important;
+    margin-top: 20px;
+    padding: 12px 20px;
+  }
+}
+
 .price-tag-inline.consultar-btn strong {
   font-size: 14px;
   color: white;
@@ -1029,6 +1038,13 @@
 
   .price-tag {
     margin-top: 10px;
+    width: 70% !important;
+  }
+
+  .price-tag.consultar-btn {
+    width: 70% !important;
+    margin-top: 20px;
+    padding: 12px 20px;
   }
 
   .pack-nav-btn {
