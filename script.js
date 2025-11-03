@@ -125,6 +125,9 @@ const pageContents = [
             
             <h4>Supervisión durante la instalación</h4>
             <p>Supervisan y coordinan para que el montaje se realice en tiempo y forma, siguiendo las indicaciones y planos del diseño de decoración.</p>
+            <a href="https://wa.me/34657092014" class="price-tag consultar-btn" target="_blank" rel="noopener noreferrer">
+              <strong>CONSULTAR</strong>
+            </a>
           </div>
         </div>
       </div>
