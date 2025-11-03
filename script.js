@@ -115,7 +115,7 @@ const pageContents = [
           <div class="montaje-content-box">
             <p>Este servicio se centra en la colocación, distribución y montaje de elementos decorativos, detalles personalizados, centros de mesas, señalización, regalos y otros elementos decorativos en el lugar del evento.</p>
             
-            <h5>Características de este servicio</h5>
+            <h3 style="margin-top: 4%;">Características de este servicio</h3>
             
             <h4>Foco exclusivo en montaje</h4>
             <p>La función principal es la colocación y montaje de todos los detalles y decoración en su lugar correspondiente días o horas antes del evento.</p>
