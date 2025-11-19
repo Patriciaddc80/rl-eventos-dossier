@@ -938,6 +938,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightbox = new GalleryLightbox();
     lightbox.init();
 
+    // Inicializar carrusel de proceso (solo móvil)
+    if (!isDesktop()) {
+      new ProcesoCarousel();
+    }
+
     // Lazy loading para imágenes
     observeElements('img[loading="lazy"]', (img) => {
       if (img.dataset.src) {
@@ -950,6 +955,113 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('❌ Error durante la inicialización:', error);
   }
 });
+
+/* ========================================
+   CARRUSEL DE PROCESO (MÓVIL)
+   ======================================== */
+class ProcesoCarousel {
+  constructor() {
+    this.track = document.getElementById('procesoCarouselTrack');
+    this.indicators = document.querySelectorAll('.proceso-indicator');
+    this.slides = document.querySelectorAll('.proceso-carousel-slide');
+    this.currentSlide = 0;
+    this.totalSlides = this.slides.length;
+    
+    if (!this.track || this.slides.length === 0) {
+      return;
+    }
+    
+    this.init();
+  }
+  
+  init() {
+    // Event listeners para indicadores
+    this.indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => this.goToSlide(index));
+    });
+    
+    // Soporte para swipe en móvil
+    this.addSwipeSupport();
+    
+    // Auto-play opcional (cambiar cada 5 segundos)
+    this.startAutoPlay();
+  }
+  
+  goToSlide(index) {
+    if (index < 0 || index >= this.totalSlides) return;
+    
+    // Remover clase active de todos los slides e indicadores
+    this.slides.forEach(slide => slide.classList.remove('active'));
+    this.indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Agregar clase active al slide e indicador actual
+    this.slides[index].classList.add('active');
+    this.indicators[index].classList.add('active');
+    
+    this.currentSlide = index;
+    this.stopAutoPlay();
+    this.startAutoPlay();
+  }
+  
+  nextSlide() {
+    const next = (this.currentSlide + 1) % this.totalSlides;
+    this.goToSlide(next);
+  }
+  
+  prevSlide() {
+    const prev = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+    this.goToSlide(prev);
+  }
+  
+  addSwipeSupport() {
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+    
+    this.track.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+      this.stopAutoPlay();
+    });
+    
+    this.track.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].clientX;
+    });
+    
+    this.track.addEventListener('touchend', () => {
+      if (!isDragging) return;
+      
+      const diffX = startX - currentX;
+      const threshold = 50; // Mínimo de píxeles para considerar un swipe
+      
+      if (Math.abs(diffX) > threshold) {
+        if (diffX > 0) {
+          this.nextSlide();
+        } else {
+          this.prevSlide();
+        }
+      }
+      
+      isDragging = false;
+      this.startAutoPlay();
+    });
+  }
+  
+  startAutoPlay() {
+    this.stopAutoPlay();
+    this.autoPlayInterval = setInterval(() => {
+      this.nextSlide();
+    }, 5000);
+  }
+  
+  stopAutoPlay() {
+    if (this.autoPlayInterval) {
+      clearInterval(this.autoPlayInterval);
+      this.autoPlayInterval = null;
+    }
+  }
+}
 
 /* ========================================
    MANEJO DE RESIZE CON DEBOUNCE

@@ -340,8 +340,7 @@ ease-out;
 }
 
 .nav-btn {
-  background: var(--color-white);
-  color: var(--color-primary);
+  background: none;
   border: none;
   padding: 0;
   width: 50px;
@@ -350,22 +349,37 @@ ease-out;
   cursor: pointer;
   transition: all var(--transition-normal);
   pointer-events: all;
-  box-shadow: var(--shadow-lg);
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: visible;
 }
 
 .nav-btn svg {
   width: 24px;
   height: 24px;
+  fill: #b8966a;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .nav-btn:hover:not(:disabled) {
-  transform: scale(1.15);
-  box-shadow: var(--shadow-xl);
-  background: var(--color-primary);
-  color: var(--color-white);
+  transform: scale(1.1);
+  background: none;
+  box-shadow: none;
+}
+
+.nav-btn:hover:not(:disabled) svg {
+  transform: translateX(3px);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+}
+
+#prevBtn:hover:not(:disabled) svg {
+  transform: translateX(-3px);
 }
 
 .nav-btn:active:not(:disabled) {
@@ -373,9 +387,16 @@ ease-out;
 }
 
 .nav-btn:disabled {
-  opacity: 0.3;
+  opacity: 0.4;
   cursor: not-allowed;
-  transform: scale(0.9);
+  transform: scale(0.95);
+  animation: none;
+  background: none;
+}
+
+.nav-btn:disabled svg {
+  fill: #8b7355;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
 
 /* ========================================
