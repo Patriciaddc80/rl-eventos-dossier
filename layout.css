@@ -159,7 +159,6 @@
 
 .hero-content {
   position: relative;
-  margin-top: 8%;
   z-index: 1;
   text-align: center;
   max-width: 800px;
@@ -206,10 +205,13 @@ ease-out;
    ======================================== */
 
 .main-content {
-  padding-top: 70px;
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
+}
+
+.section + .section {
+  margin-top: 2px;
 }
 
 .section {

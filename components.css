@@ -8,7 +8,7 @@
 
 .service-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 4%;
   max-width: 100%;
 }
@@ -150,8 +150,7 @@
 
 /* Grid de 3 columnas para packs */
 .pack-grid-inline {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
   gap: 20px;
   max-width: 900px;
   width: 100%;
@@ -499,8 +498,7 @@
 
 /* Grid de 3 columnas para rincones inline */
 .rincon-grid-inline {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
   gap: 20px;
   max-width: 800px;
   width: 100%;
@@ -588,14 +586,13 @@
 }
 
 .proceso-content h3 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-bottom: var(--spacing-sm);
   color: var(--color-text);
 }
 
 .proceso-content p {
   color: var(--color-text-lighter);
-  font-size: 1rem;
   line-height: 1.7;
   margin: 0;
   text-align: justify;
@@ -907,6 +904,11 @@
 
 /* Media Query para Tablets - 768px */
 @media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3%;
+  }
+
   .page-title {
     font-size: 32px;
     margin-bottom: 20px;
@@ -1010,10 +1012,50 @@
 
 /* Media Query para Móviles - 480px */
 @media (max-width: 480px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
   .page-title {
     font-size: 26px;
     margin-bottom: 15px;
     letter-spacing: 1px;
+  }
+}
+
+/* Media Query para Pantallas Muy Pequeñas - 320px */
+@media (max-width: 320px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .service-card {
+    padding: 8px;
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .service-icon img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .service-card h3 {
+    font-size: 12px;
+  }
+
+  .service-card p {
+    font-size: 10px;
+  }
+
+  .page-title {
+    font-size: 22px;
+    margin-bottom: 12px;
   }
 
   .page-separator {
@@ -1670,5 +1712,295 @@
 @media (max-width: 768px) {
   .mobile-footer {
     display: block;
+  }
+}
+
+/* ========================================
+   CARRUSEL DE DECORACIÓN FLORAL
+   ======================================== */
+
+/* Estilos para la sección de decoración floral mejorada */
+.decoracion-floral-content {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.decoracion-floral-text {
+  padding: 15px;
+  text-align: justify;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .decoracion-floral-text {
+    font-size: 15px;
+    padding: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .decoracion-floral-text {
+    font-size: 16px;
+    padding: 25px;
+    max-width: 800px;
+  }
+}
+
+/* Ocultar carrusel antiguo cuando existe el nuevo */
+.floral-slider-enhanced ~ .floral-carousel-wrapper,
+.floral-slider-enhanced ~ .floral-slider-desktop {
+  display: none !important;
+}
+
+.floral-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#c {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#c > li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, left 0.8s ease-in-out;
+  left: 100%;
+  top: 0;
+  display: block;
+}
+
+#c > li.active {
+  opacity: 1 !important;
+  z-index: 1;
+}
+
+#c > li img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+  background: #f5f5f5;
+}
+
+/* Botones de navegación */
+.floral-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: #333;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.floral-carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.floral-carousel-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.floral-carousel-prev {
+  left: 15px;
+}
+
+.floral-carousel-next {
+  right: 15px;
+}
+
+.floral-carousel-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+
+/* Paginación */
+.floral-carousel-pagination {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+/* Paginación debajo en móvil */
+@media (max-width: 768px) {
+  .floral-carousel-pagination {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 15px;
+  }
+}
+
+.floral-carousel-pagination .pagination-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.floral-carousel-pagination .pagination-dot.active {
+  background: rgba(255, 255, 255, 0.9);
+  width: 24px;
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.floral-carousel-pagination .pagination-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Asegurar que el contenedor sea visible */
+#servicio-montaje #c,
+.montaje-content-box #c,
+.floral-carousel-wrapper {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Asegurar visibilidad en desktop */
+@media (min-width: 1024px) {
+  /* Ocultar carrusel móvil en desktop */
+  .montaje-content-box .floral-carousel-wrapper {
+    display: none !important;
+  }
+
+  /* Mostrar slider desktop */
+  .montaje-content-box .floral-slider-desktop {
+    display: block !important;
+  }
+}
+
+/* Ocultar slider desktop en móvil */
+@media (max-width: 1023px) {
+  .floral-slider-desktop {
+    display: none !important;
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  #c {
+    height: 450px;
+    min-height: 450px;
+  }
+  
+  #c > li {
+    height: 100%;
+  }
+
+  #c > li img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  #c > li.active {
+    left: 0 !important;
+  }
+
+  .floral-carousel-btn {
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
+
+  .floral-carousel-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #c {
+    height: 400px;
+    min-height: 400px;
+  }
+
+  #c > li img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .floral-carousel-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .floral-carousel-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .floral-carousel-pagination {
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .floral-carousel-pagination .pagination-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .floral-carousel-pagination .pagination-dot.active {
+    width: 25px;
+  }
+  .rincon-grid-inline{
+    grid-template-columns:4, 1fr;
   }
 }
