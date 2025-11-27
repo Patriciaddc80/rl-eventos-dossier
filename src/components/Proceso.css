@@ -4,7 +4,6 @@
 
 #proceso {
   scroll-margin-top: 70px;
-  overflow-x: hidden;
   width: 100%;
   box-sizing: border-box;
 }
@@ -20,7 +19,6 @@
   padding: 0 var(--spacing-md);
   width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 .proceso-step {
@@ -31,7 +29,6 @@
   padding: var(--spacing-md);
   background: var(--color-white);
   border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
   border: 1px solid var(--color-border);
   aspect-ratio: 1;
@@ -42,7 +39,6 @@
 
 .proceso-step:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
   border-color: var(--color-primary);
 }
 
