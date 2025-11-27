@@ -58,6 +58,7 @@
   top: 0;
   bottom: 0;
   width: 0;
+  background: var(--color-primary);
   transition: width var(--transition-normal);
   border-radius: 4px;
 }
@@ -84,7 +85,6 @@
   transform: translateY(-50%);
   width: 3px;
   height: 24px;
-  background: var(--color-primary);
   border-radius: 0 2px 2px 0;
   z-index: 2;
 }
@@ -361,6 +361,33 @@
     opacity: 1;
     visibility: visible;
     color: var(--color-text);
+  }
+}
+
+/* Pantallas móviles - quitar padding y background de enlaces del menú hamburguesa */
+@media (max-width: 767px) {
+  .nav-menu {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  
+  .nav-link {
+    padding: 0;
+  }
+  
+  .nav-link::before {
+    background: transparent;
+    display: none;
+  }
+  
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    display: none;
+  }
+  
+  .nav-link.active::after {
+    display: none;
   }
 }
 

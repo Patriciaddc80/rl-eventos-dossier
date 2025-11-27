@@ -15,6 +15,15 @@ const menuItems = [
   { id: 'contacto', label: 'Contacto' }
 ]
 
+// Enlaces permitidos solo en el menú hamburguesa móvil
+const mobileMenuItems = [
+  { id: 'inicio', label: 'Inicio' },
+  { id: 'quienes-somos', label: 'Quiénes Somos' },
+  { id: 'servicios', label: 'Servicios' },
+  { id: 'galeria', label: 'Galería' },
+  { id: 'contacto', label: 'Contacto' }
+]
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('inicio')
@@ -133,7 +142,7 @@ const Navbar = () => {
         ></div>
         
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`} id="navMenu" role="menu">
-          {menuItems.map((item) => (
+          {mobileMenuItems.map((item) => (
             <li key={item.id} role="menuitem">
               <a
                 href={`#${item.id}`}
