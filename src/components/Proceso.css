@@ -99,7 +99,6 @@
   .proceso-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-    padding: 0 8px;
     max-width: 100%;
     margin-top: var(--spacing-lg);
   }
@@ -132,8 +131,7 @@
 @media (max-width: 480px) {
   .proceso-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 0 10px;
+    gap: 6px;
     max-width: 100%;
     margin-top: var(--spacing-md);
   }
@@ -149,7 +147,7 @@
   .proceso-number {
     width: 28px;
     height: 28px;
-    font-size: 0.75rem;
+    font-size: 0.60rem;
     top: -14px;
     box-shadow: 0 2px 8px rgba(211, 175, 54, 0.4);
   }
@@ -164,6 +162,72 @@
     font-size: 0.6rem;
     line-height: 1.25;
     margin: 0;
+  }
+}
+
+/* Pantallas de 380px - cajitas más pequeñas */
+@media (max-width: 380px) {
+  .proceso-container {
+    gap: 6px;
+    padding: 0 8px;
+    margin-top: var(--spacing-sm);
+  }
+  
+  .proceso-step {
+    padding: 8px 6px;
+    margin-top: 15px;
+    border-radius: 6px;
+  }
+  
+  .proceso-number {
+    width: 24px;
+    height: 24px;
+    font-size: 0.7rem;
+    top: -12px;
+  }
+  
+  .proceso-content h3 {
+    font-size: 0.65rem;
+    margin-bottom: 3px;
+    line-height: 1.15;
+  }
+  
+  .proceso-content p {
+    font-size: 0.55rem;
+    line-height: 1.2;
+  }
+}
+
+/* Pantallas de 320px - cajitas aún más pequeñas */
+@media (max-width: 320px) {
+  .proceso-container {
+    gap: 5px;
+    padding: 0 6px;
+    margin-top: var(--spacing-sm);
+  }
+  
+  .proceso-step {
+    padding: 6px 5px;
+    margin-top: 12px;
+    border-radius: 5px;
+  }
+  
+  .proceso-number {
+    width: 22px;
+    height: 22px;
+    font-size: 0.65rem;
+    top: -11px;
+  }
+  
+  .proceso-content h3 {
+    font-size: 0.6rem;
+    margin-bottom: 2px;
+    line-height: 1.1;
+  }
+  
+  .proceso-content p {
+    font-size: 0.5rem;
+    line-height: 1.15;
   }
 }
 
