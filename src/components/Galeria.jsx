@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Galeria.css'
 
 const Galeria = () => {
@@ -64,6 +64,24 @@ const Galeria = () => {
     galeria.imagenes.map(img => ({ src: img, alt: galeria.titulo }))
   )
 
+  // Preload agresivo de todas las imágenes de la galería
+  useEffect(() => {
+    todasLasImagenes.forEach((imgObj, index) => {
+      // Preload las primeras 6 imágenes (visibles inicialmente)
+      if (index < 6) {
+        const img = new Image()
+        img.src = imgObj.src
+      } else {
+        // Prefetch el resto
+        const link = document.createElement('link')
+        link.rel = 'prefetch'
+        link.as = 'image'
+        link.href = imgObj.src
+        document.head.appendChild(link)
+      }
+    })
+  }, [todasLasImagenes])
+
   const openLightbox = (index) => {
     setCurrentImage(index)
     setLightboxOpen(true)
@@ -119,6 +137,8 @@ const Galeria = () => {
                         src={imagen} 
                         alt={`${galeria.titulo} ${imgIndex + 1}`} 
                         loading="lazy"
+                        decoding="async"
+                        fetchPriority="low"
                       />
                     </div>
                   )

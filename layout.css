@@ -284,13 +284,13 @@ ease-out;
 
 .img-col {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
 }
 
 .featured-img {
-  width: 100%;
-  max-width: 350px;
+  width: 75%;
+  max-width: 354px;
   height: auto;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);

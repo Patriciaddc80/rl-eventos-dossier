@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './Rincones.css'
 
 const Rincones = () => {
@@ -9,6 +10,14 @@ const Rincones = () => {
     { icon: '/assets/img/codigo-de-vestimenta.png', label: 'Seating' },
     { icon: '/assets/img/cockteleria.png', label: 'Copa bienvenida' }
   ]
+
+  // Preload de todos los iconos
+  useEffect(() => {
+    rincones.forEach(rincon => {
+      const img = new Image()
+      img.src = rincon.icon
+    })
+  }, [])
 
   return (
     <section id="rincones" className="section">
@@ -31,6 +40,8 @@ const Rincones = () => {
                   loading="lazy" 
                   width="50" 
                   height="50"
+                  decoding="async"
+                  fetchPriority="low"
                 />
                 <span>{rincon.label}</span>
               </div>

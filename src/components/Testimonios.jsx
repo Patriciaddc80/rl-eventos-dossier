@@ -30,6 +30,24 @@ const Testimonios = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const intervalRef = useRef(null)
 
+  // Preload agresivo de todas las imágenes de testimonios
+  useEffect(() => {
+    testimonios.forEach((testimonio, index) => {
+      const img = new Image()
+      img.src = testimonio.image
+      
+      if (index === 0) {
+        // Preload link para la primera (más crítica)
+        const link = document.createElement('link')
+        link.rel = 'preload'
+        link.as = 'image'
+        link.href = testimonio.image
+        link.fetchPriority = 'high'
+        document.head.appendChild(link)
+      }
+    })
+  }, [])
+
   useEffect(() => {
     if (isAutoPlaying) {
       intervalRef.current = setInterval(() => {
@@ -98,6 +116,8 @@ const Testimonios = () => {
                           src={testimonio.image} 
                           alt={testimonio.alt} 
                           loading="lazy"
+                          decoding="async"
+                          fetchPriority={index === 0 ? "auto" : "low"}
                         />
                         <div className="image-overlay"></div>
                       </div>

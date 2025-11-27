@@ -1,6 +1,13 @@
+import { useEffect } from 'react'
 import './QuienesSomos.css'
 
 const QuienesSomos = () => {
+  // Preload de la imagen crítica
+  useEffect(() => {
+    const img = new Image()
+    img.src = '/assets/img/image36.jpeg'
+  }, [])
+
   return (
     <section id="quienes-somos" className="section">
       <div className="container">
@@ -17,6 +24,8 @@ const QuienesSomos = () => {
               loading="lazy" 
               width="350" 
               height="280"
+              decoding="async"
+              fetchPriority="low"
             />
           </div>
           <div className="text-col">

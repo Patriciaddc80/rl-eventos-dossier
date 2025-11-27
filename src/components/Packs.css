@@ -64,8 +64,8 @@
 }
 
 .pack-card-inline .pricing-card-list {
-  flex: 1;
-  margin-bottom: var(--spacing-sm);
+  list-style: none;
+  padding: 4px;
 }
 
 .price-tag-inline.consultar-btn {

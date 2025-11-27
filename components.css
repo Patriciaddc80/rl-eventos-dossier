@@ -84,8 +84,8 @@
   font-size: 1.5rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
-  margin-bottom: var(--spacing-lg);
   text-align: center;
+  margin-top: 3%;
 }
 
 .services-extra-grid {
@@ -316,8 +316,9 @@
   justify-content: center;
   background: #d3af36;
   width: auto;
-  width: 55%;
-  margin-top: 3%;
+  width: 53%;
+  padding: 8px;
+  margin-top: 10%;
 }
 
 /* Ajustes para mobile */
@@ -556,7 +557,6 @@
   padding: var(--spacing-lg);
   background: var(--color-white);
   border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
 }
 

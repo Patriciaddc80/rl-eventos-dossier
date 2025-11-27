@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
   background: var(--color-white);
   border-radius: var(--border-radius-md);
   transition: all var(--transition-normal);
@@ -61,7 +61,6 @@
   justify-content: center;
   font-weight: var(--font-weight-bold);
   font-size: 1.3rem;
-  box-shadow: var(--shadow-md);
   z-index: 10;
   flex-shrink: 0;
 }
@@ -82,11 +81,7 @@
 }
 
 .proceso-content p {
-  color: var(--color-text-lighter);
   font-size: 12px;
-  
- 
-  text-align: justify;
   text-align-last: center;
 }
 
@@ -100,7 +95,7 @@
   }
 
   .proceso-step {
-    padding: 10px;
+    padding: 6px 10px;
     aspect-ratio: 1;
     min-height: 0;
     margin-top: 20px;
@@ -133,7 +128,7 @@
   }
   
   .proceso-step {
-    padding: 10px 8px;
+    padding: 6px 8px;
     aspect-ratio: 1;
     min-height: 0;
     margin-top: 18px;
@@ -170,7 +165,7 @@
   }
   
   .proceso-step {
-    padding: 8px 6px;
+    padding: 5px 6px;
     margin-top: 15px;
     border-radius: 6px;
   }
@@ -203,7 +198,7 @@
   }
   
   .proceso-step {
-    padding: 6px 5px;
+    padding: 4px 5px;
     margin-top: 12px;
     border-radius: 5px;
   }
@@ -236,7 +231,7 @@
   }
 
   .proceso-step {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-lg);
     margin-top: 35px;
   }
 
@@ -265,7 +260,7 @@
   }
 
   .proceso-step {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-md) var(--spacing-xl);
     margin-top: 40px;
   }
 
@@ -278,9 +273,5 @@
 
   .proceso-content h3 {
     font-size: 1.15rem;
-  }
-
-  .proceso-content p {
-    font-size: 0.95rem;
   }
 }

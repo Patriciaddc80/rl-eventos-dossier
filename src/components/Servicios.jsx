@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './Servicios.css'
 
 const Servicios = () => {
@@ -34,6 +35,19 @@ const Servicios = () => {
     }
   ]
 
+  // Preload de todos los iconos de servicios
+  useEffect(() => {
+    const allIcons = [
+      ...servicios.map(s => s.icon),
+      ...serviciosExtra.map(s => s.icon)
+    ]
+    
+    allIcons.forEach(icon => {
+      const img = new Image()
+      img.src = icon
+    })
+  }, [])
+
   return (
     <section id="servicios" className="section section-alt">
       <div className="container">
@@ -49,6 +63,8 @@ const Servicios = () => {
                   src={servicio.icon} 
                   alt={servicio.title} 
                   loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                   width="60" 
                   height="60"
                 />

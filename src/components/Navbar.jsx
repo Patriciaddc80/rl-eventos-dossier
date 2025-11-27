@@ -112,6 +112,8 @@ const Navbar = () => {
               className="nav-logo" 
               width="50" 
               height="50"
+              fetchPriority="high"
+              decoding="async"
             />
           </a>
         </div>

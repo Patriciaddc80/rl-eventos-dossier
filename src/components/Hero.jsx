@@ -1,6 +1,16 @@
+import { useEffect } from 'react'
 import './Hero.css'
 
 const Hero = () => {
+  // Preload inmediato usando Image constructor (más rápido que preload link)
+  useEffect(() => {
+    const logoImg = new Image()
+    logoImg.src = '/assets/img/logo.png'
+    
+    const ringsImg = new Image()
+    ringsImg.src = '/assets/img/ring-wedding3.png'
+  }, [])
+
   return (
     <section id="menu" className="hero">
       <div className="hero-overlay"></div>
@@ -12,6 +22,8 @@ const Hero = () => {
             className="rings-img" 
             width="200"
             height="60"
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
         <div className="hero-logo">
@@ -21,6 +33,8 @@ const Hero = () => {
             className="logo-main" 
             width="200" 
             height="200"
+            fetchPriority="high"
+            decoding="async"
           />
         </div>
         <h1 className="hero-title">Dossier<br />Servicios</h1>
