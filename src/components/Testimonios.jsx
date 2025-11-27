@@ -68,7 +68,7 @@ const Testimonios = () => {
         <div className="testimonios-header">
           <h2 className="testimonios-title">TESTIMONIOS</h2>
           <div className="testimonios-divider"></div>
-          <p className="testimonios-subtitle">Lo que dicen nuestros clientes</p>
+          <h3 className="testimonios-subtitle">Lo que dicen nuestros clientes</h3>
         </div>
 
         <div className="testimonios-carousel">
