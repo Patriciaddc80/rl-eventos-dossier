@@ -85,7 +85,10 @@
 
 .proceso-content p {
   font-size: 12px;
+  text-align: justify;
   text-align-last: center;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 /* Pantallas pequeñas - 2 columnas */
@@ -102,26 +105,39 @@
 
   .proceso-step {
     max-width: 100%;
-    padding: 16px;
-    gap: 8px;
-    margin-top: 20px;
+    padding: 12px 10px;
+    gap: 6px;
+    margin-top: 15px;
+    overflow: hidden;
   }
 
   .proceso-number {
-    width: 30px;
-    height: 30px;
-    font-size: 0.9rem;
-    top: -20px;
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+    top: -12px;
+  }
+
+  .proceso-content {
+    width: 100%;
+    overflow: hidden;
   }
 
   .proceso-content h3 {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     margin-bottom: 4px;
+    line-height: 1.2;
+    word-wrap: break-word;
   }
 
   .proceso-content p {
-    font-size: 0.65rem;
-    line-height: 1.3;
+    font-size: 0.6rem;
+    line-height: 1.25;
+    text-align: justify;
+    text-align-last: center;
+    margin: 0;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 }
 
@@ -129,7 +145,7 @@
   .proceso-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
     max-width: 400px;
     width: 100%;
     overflow-x: hidden;
@@ -139,29 +155,40 @@
   
   .proceso-step {
     max-width: 100%;
-    padding: 12px;
-    gap: 6px;
-    margin-top: 18px;
+    padding: 10px 8px;
+    gap: 5px;
+    margin-top: 12px;
+    overflow: hidden;
   }
   
   .proceso-number {
-    width: 28px;
-    height: 28px;
-    font-size: 0.85rem;
-    top: -14px;
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+    top: -11px;
     box-shadow: 0 2px 8px rgba(211, 175, 54, 0.4);
+  }
+
+  .proceso-content {
+    width: 100%;
+    overflow: hidden;
   }
   
   .proceso-content h3 {
-    font-size: 0.8rem;
-    margin-bottom: 4px;
-    line-height: 1.2;
+    font-size: 0.7rem;
+    margin-bottom: 3px;
+    line-height: 1.15;
+    word-wrap: break-word;
   }
   
   .proceso-content p {
-    font-size: 0.7rem;
-    line-height: 1.25;
+    font-size: 0.6rem;
+    line-height: 1.2;
     margin: 0;
+    text-align: justify;
+    text-align-last: center;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 }
 
@@ -170,7 +197,7 @@
   .proceso-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 8px;
     max-width: 340px;
     width: 100%;
     overflow-x: hidden;
@@ -180,27 +207,38 @@
   
   .proceso-step {
     max-width: 100%;
-    padding: 10px;
-    gap: 5px;
-    margin-top: 15px;
+    padding: 8px 6px;
+    gap: 4px;
+    margin-top: 10px;
+    overflow: hidden;
   }
   
   .proceso-number {
-    width: 24px;
-    height: 24px;
-    font-size: 0.75rem;
-    top: -12px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
+    top: -10px;
+  }
+
+  .proceso-content {
+    width: 100%;
+    overflow: hidden;
   }
   
   .proceso-content h3 {
-    font-size: 0.75rem;
-    margin-bottom: 3px;
-    line-height: 1.15;
+    font-size: 0.65rem;
+    margin-bottom: 2px;
+    line-height: 1.1;
+    word-wrap: break-word;
   }
   
   .proceso-content p {
-    font-size: 0.65rem;
-    line-height: 1.2;
+    font-size: 0.55rem;
+    line-height: 1.15;
+    text-align: justify;
+    text-align-last: center;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 }
 
@@ -209,7 +247,7 @@
   .proceso-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 6px;
     max-width: 300px;
     width: 100%;
     overflow-x: hidden;
@@ -219,27 +257,38 @@
   
   .proceso-step {
     max-width: 100%;
-    padding: 8px;
-    gap: 4px;
-    margin-top: 12px;
+    padding: 6px 5px;
+    gap: 3px;
+    margin-top: 8px;
+    overflow: hidden;
   }
   
   .proceso-number {
-    width: 22px;
-    height: 22px;
-    font-size: 0.7rem;
-    top: -11px;
+    width: 18px;
+    height: 18px;
+    font-size: 0.6rem;
+    top: -9px;
+  }
+
+  .proceso-content {
+    width: 100%;
+    overflow: hidden;
   }
   
   .proceso-content h3 {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     margin-bottom: 2px;
     line-height: 1.1;
+    word-wrap: break-word;
   }
   
   .proceso-content p {
-    font-size: 0.6rem;
-    line-height: 1.15;
+    font-size: 0.5rem;
+    line-height: 1.1;
+    text-align: justify;
+    text-align-last: center;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 }
 
