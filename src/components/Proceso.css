@@ -37,7 +37,7 @@
   justify-content: center;
   gap: var(--spacing-xs);
   position: relative;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .proceso-step:hover {
@@ -47,7 +47,7 @@
 
 .proceso-number {
   position: absolute;
-  top: -30px;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
@@ -108,15 +108,24 @@
     max-width: 100%;
     padding: 10px 8px;
     gap: 6px;
-    margin-top: 15px;
-    overflow: hidden;
+    margin-top: 25px;
+    overflow: visible;
   }
 
   .proceso-number {
-    width: 24px;
-    height: 24px;
-    font-size: 0.75rem;
-    top: -12px;
+    width: 36px;
+    height: 25px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-black);
+    font-size: 1rem;
+    flex-shrink: 0;
+    top: -18px;
+    z-index: 20;
   }
 
   .proceso-content {
@@ -160,16 +169,24 @@
     max-width: 100%;
     padding: 8px 6px;
     gap: 5px;
-    margin-top: 12px;
-    overflow: hidden;
+    margin-top: 22px;
+    overflow: visible;
   }
   
   .proceso-number {
-    width: 22px;
-    height: 22px;
-    font-size: 0.7rem;
-    top: -11px;
-    box-shadow: 0 2px 8px rgba(211, 175, 54, 0.4);
+    width: 36px;
+    height: 25px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-black);
+    font-size: 1rem;
+    flex-shrink: 0;
+    top: -16px;
+    z-index: 20;
   }
 
   .proceso-content {
@@ -214,15 +231,24 @@
     max-width: 100%;
     padding: 6px 5px;
     gap: 4px;
-    margin-top: 10px;
-    overflow: hidden;
+    margin-top: 18px;
+    overflow: visible;
   }
   
   .proceso-number {
-    width: 20px;
-    height: 20px;
-    font-size: 0.65rem;
-    top: -10px;
+    width: 36px;
+    height: 25px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-black);
+    font-size: 1rem;
+    flex-shrink: 0;
+    top: -14px;
+    z-index: 20;
   }
 
   .proceso-content {
@@ -266,15 +292,24 @@
     max-width: 100%;
     padding: 5px 4px;
     gap: 3px;
-    margin-top: 8px;
-    overflow: hidden;
+    margin-top: 15px;
+    overflow: visible;
   }
   
   .proceso-number {
-    width: 18px;
-    height: 18px;
-    font-size: 0.6rem;
-    top: -9px;
+    width: 36px;
+    height: 25px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-black);
+    font-size: 1rem;
+    flex-shrink: 0;
+    top: -13px;
+    z-index: 20;
   }
 
   .proceso-content {
@@ -312,14 +347,14 @@
   .proceso-step {
     max-width: 340px;
     padding: 18px;
-    margin-top: 35px;
+    margin-top: 45px;
   }
 
   .proceso-number {
     width: 55px;
     height: 55px;
     font-size: 1.4rem;
-    top: -35px;
+    top: -40px;
   }
 
   .proceso-content h3 {
@@ -343,14 +378,14 @@
   .proceso-step {
     max-width: 380px;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   .proceso-number {
     width: 60px;
     height: 60px;
     font-size: 1.5rem;
-    top: -40px;
+    top: -45px;
   }
 
   .proceso-content h3 {

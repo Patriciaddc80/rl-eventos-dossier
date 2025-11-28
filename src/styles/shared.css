@@ -45,21 +45,20 @@
 
 /* Botón de consulta */
 .btn-consultar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: var(--spacing-lg) auto;
-  padding: var(--spacing-md) var(--spacing-xl);
-  background: #d3af36;
-  color: var(--color-white);
-  text-decoration: none;
-  border-radius: var(--border-radius-md);
-  font-weight: var(--font-weight-bold);
-  font-size: 1.1rem;
-  transition: all var(--transition-normal);
-  border: 2px solid #d3af36;
-  max-width: 300px;
-  width: 100%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: var(--spacing-lg) auto !important;
+  background: #d3af36 !important;
+  color: var(--color-white) !important;
+  text-decoration: none !important;
+  border-radius: var(--border-radius-md) !important;
+  font-weight: var(--font-weight-bold) !important;
+  font-size: 1.1rem !important;
+  transition: all var(--transition-normal) !important;
+  border: 2px solid #d3af36 !important;
+  max-width: 300px !important;
+  width: 50% !important;
 }
 
 .btn-consultar:hover,
