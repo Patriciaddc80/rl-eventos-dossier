@@ -224,7 +224,7 @@
   line-height: 1.75;
   color: #3a3a3a;
   font-style: italic;
-  margin: 0 0 var(--spacing-md) 0;
+  margin: 0 0 var(--spacing-xs) 0;
   padding: 0;
   padding-right: var(--spacing-md);
   border: none;
@@ -241,8 +241,8 @@
 }
 
 .testimonial-meta {
-  margin-top: auto;
-  padding-top: var(--spacing-md);
+  margin-top: 0;
+  padding-top: var(--spacing-xs);
   border-top: 1px solid #f0f0f0;
 }
 
