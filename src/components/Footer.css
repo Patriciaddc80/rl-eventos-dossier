@@ -551,6 +551,8 @@
     flex-direction: column;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
+    justify-content: center;
+    width: 100%;
   }
 
   .footer-logo-wrapper {
@@ -560,17 +562,22 @@
     padding: var(--spacing-sm);
     border: 3px solid rgba(212, 184, 150, 0.5);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer-brand-name {
     font-size: 1.4rem;
     margin: 0;
+    text-align: center;
   }
 
   .footer-brand-tagline {
     font-size: 0.87rem;
     margin: 0;
     font-weight: 600;
+    text-align: center;
   }
 
   .footer-section {
@@ -612,6 +619,7 @@
   .footer-link-button {
     padding: 8px var(--spacing-sm);
     min-height: 40px;
+    line-height: 1.2;
   }
 
   .footer-contact {
@@ -699,15 +707,21 @@
     padding: 8px;
     border: 3px solid rgba(212, 184, 150, 0.5);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin: 0 auto var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer-brand-name {
     font-size: 1.2rem;
+    text-align: center;
   }
 
   .footer-brand-tagline {
     font-size: 0.77rem;
     font-weight: 600;
+    text-align: center;
   }
 
   .footer-section {
@@ -730,6 +744,10 @@
 
   .footer-links {
     gap: 2px;
+  }
+
+  .footer-link-button {
+    line-height: 1.2;
   }
 
   .footer-contact {
@@ -778,15 +796,21 @@
     padding: 6px;
     border: 3px solid rgba(212, 184, 150, 0.5);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin: 0 auto var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer-brand-name {
     font-size: 1.1rem;
+    text-align: center;
   }
 
   .footer-brand-tagline {
     font-size: 0.72rem;
     font-weight: 600;
+    text-align: center;
   }
 
   .footer-section-title {
@@ -798,6 +822,10 @@
     padding: 6px var(--spacing-xs);
     font-size: 0.75rem;
     min-height: 40px;
+  }
+
+  .footer-link-button {
+    line-height: 1.2;
   }
 
   .footer-contact-button svg {

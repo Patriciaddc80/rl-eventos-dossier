@@ -189,9 +189,11 @@
 
 .testimonial-text-section {
   padding: var(--spacing-lg);
+  padding-top: var(--spacing-sm);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
   background: transparent;
   max-width: 100%;
@@ -218,7 +220,7 @@
 }
 
 .testimonial-quote {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.75;
   color: #3a3a3a;
   font-style: italic;
@@ -228,7 +230,7 @@
   border: none;
   position: relative;
   z-index: 1;
-  font-weight: var(--font-weight-normal);
+  font-weight: 600;
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -251,16 +253,16 @@
 }
 
 .author-name {
-  font-size: 0.9rem;
-  font-weight: var(--font-weight-bold);
+  font-size: 0.775rem;
+  font-weight: 600;
   color: var(--color-primary);
   letter-spacing: 0.5px;
 }
 
 .author-date {
-  font-size: 0.8rem;
+  font-size: 0.675rem;
   color: #8a8a8a;
-  font-weight: var(--font-weight-normal);
+  font-weight: 600;
 }
 
 /* Navegación */
@@ -395,10 +397,11 @@
   }
 
   .testimonial-quote {
-    font-size: 1.05rem;
+    font-size: 0.925rem;
     line-height: 1.8;
     max-width: 100%;
     min-width: 0;
+    font-weight: 600;
   }
 
   .nav-button {
@@ -458,10 +461,11 @@
   }
 
   .testimonial-quote {
-    font-size: 1.1rem;
+    font-size: 0.975rem;
     line-height: 1.85;
     max-width: 100%;
     min-width: 0;
+    font-weight: 600;
   }
 
   .nav-button {
@@ -502,8 +506,9 @@
   }
 
   .testimonial-quote {
-    font-size: 0.95rem;
+    font-size: 0.825rem;
     line-height: 1.7;
+    font-weight: 600;
   }
 
   .carousel-navigation {

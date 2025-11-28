@@ -4,24 +4,38 @@ import './Testimonios.css'
 const testimonios = [
   {
     image: '/assets/img/testimonial1.jpeg',
-    alt: 'Cosmina y Adrián',
+    alt: 'Boda de Cosmina y Adrián',
     quote: 'Estoy muy orgullosa, por haber encontrado esta gran empresa. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo.',
     author: 'Cosmina y Adrián',
     date: '31/05/2024'
   },
   {
     image: '/assets/img/testimonial2.jpeg',
-    alt: 'Patricia y Roberto',
+    alt: 'Boda de Patricia y Roberto',
     quote: 'Rocío transformó nuestra visión en una boda perfecta. Su atención al detalle, creatividad y profesionalidad hicieron que cada momento fuera mágico. No solo organizó nuestro día especial, sino que nos acompañó en cada paso del camino con cariño y dedicación.',
     author: 'Patricia y Roberto',
     date: '15/06/2024'
   },
   {
     image: '/assets/img/testimonial3.jpeg',
-    alt: 'Ana Cristina',
+      alt: 'Boda deAna Cristina',
     quote: 'Desde el minuto cero me has ofrecido una mano que me ha guiado durante casi dos años para organizar una boda de ensueño. Gracias por tu dedicación e implicación.',
     author: 'Ana Cristina',
     date: '06/09/2023'
+  }, 
+  {
+    image: '/assets/img/image-azucena-1001.webp',
+    alt: 'Boda de Azucena',
+    quote: 'Fue el regalo de los hermanos de la novia a los novios y la verdad es que fue la idea mejor que pudimos tener ya que así los novios disfrutaron más de su día. Todo salió perfecto y el equipo de Rocio y Rocio estuvieron perfectos. Gracias.',
+    author: 'Azucena',
+    date: '8/10/2023'
+  },
+  {
+    image: '/assets/img/image-ana-cristina-1002.webp',
+    alt: 'Boda de Ana Cristina',
+    quote: 'Estoy muy orgullosa, por haber encontrado esta gran empresa. Y sobre todo después de haberlos tratado puedo decir que es una gran empresa que ahora ya forman parte de nuestras vidas. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo. Bueno ahora ya digo bien alto que rocio y su empresa son la familia que llegue a contrastar siendo empresa y se fue siendo más que familia. Gracias.',
+    author: 'Ana Cristina',
+    date: '8/10/2023'
   }
 ]
 
