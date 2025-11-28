@@ -25,14 +25,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   background: var(--color-white);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
   border: 1px solid var(--color-primary);
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   aspect-ratio: 1;
   justify-content: center;
   gap: var(--spacing-xs);
@@ -80,7 +80,7 @@
   font-size: 1rem;
   margin-bottom: var(--spacing-xs);
   color: var(--color-text);
-  font-weight: var(--font-weight-bold);
+  font-weight: 800;
 }
 
 .proceso-content p {
@@ -89,6 +89,7 @@
   text-align-last: center;
   hyphens: auto;
   overflow-wrap: break-word;
+  font-weight: 600;
 }
 
 /* Pantallas pequeñas - 2 columnas */
@@ -105,7 +106,7 @@
 
   .proceso-step {
     max-width: 100%;
-    padding: 12px 10px;
+    padding: 10px 8px;
     gap: 6px;
     margin-top: 15px;
     overflow: hidden;
@@ -128,6 +129,7 @@
     margin-bottom: 4px;
     line-height: 1.2;
     word-wrap: break-word;
+    font-weight: 800;
   }
 
   .proceso-content p {
@@ -138,6 +140,7 @@
     margin: 0;
     word-wrap: break-word;
     hyphens: auto;
+    font-weight: 600;
   }
 }
 
@@ -155,7 +158,7 @@
   
   .proceso-step {
     max-width: 100%;
-    padding: 10px 8px;
+    padding: 8px 6px;
     gap: 5px;
     margin-top: 12px;
     overflow: hidden;
@@ -179,6 +182,7 @@
     margin-bottom: 3px;
     line-height: 1.15;
     word-wrap: break-word;
+    font-weight: 800;
   }
   
   .proceso-content p {
@@ -189,6 +193,7 @@
     text-align-last: center;
     word-wrap: break-word;
     hyphens: auto;
+    font-weight: 600;
   }
 }
 
@@ -207,7 +212,7 @@
   
   .proceso-step {
     max-width: 100%;
-    padding: 8px 6px;
+    padding: 6px 5px;
     gap: 4px;
     margin-top: 10px;
     overflow: hidden;
@@ -230,6 +235,7 @@
     margin-bottom: 2px;
     line-height: 1.1;
     word-wrap: break-word;
+    font-weight: 800;
   }
   
   .proceso-content p {
@@ -239,6 +245,7 @@
     text-align-last: center;
     word-wrap: break-word;
     hyphens: auto;
+    font-weight: 600;
   }
 }
 
@@ -257,7 +264,7 @@
   
   .proceso-step {
     max-width: 100%;
-    padding: 6px 5px;
+    padding: 5px 4px;
     gap: 3px;
     margin-top: 8px;
     overflow: hidden;
@@ -280,6 +287,7 @@
     margin-bottom: 2px;
     line-height: 1.1;
     word-wrap: break-word;
+    font-weight: 800;
   }
   
   .proceso-content p {
@@ -289,6 +297,7 @@
     text-align-last: center;
     word-wrap: break-word;
     hyphens: auto;
+    font-weight: 600;
   }
 }
 
@@ -301,8 +310,8 @@
   }
 
   .proceso-step {
-    max-width: 320px;
-    padding: 24px;
+    max-width: 340px;
+    padding: 18px;
     margin-top: 35px;
   }
 
@@ -315,10 +324,12 @@
 
   .proceso-content h3 {
     font-size: 1.05rem;
+    font-weight: 800;
   }
 
   .proceso-content p {
     font-size: 0.9rem;
+    font-weight: 600;
   }
 }
 
@@ -330,8 +341,8 @@
   }
 
   .proceso-step {
-    max-width: 350px;
-    padding: 28px;
+    max-width: 380px;
+    padding: 20px;
     margin-top: 40px;
   }
 
@@ -344,9 +355,11 @@
 
   .proceso-content h3 {
     font-size: 1.1rem;
+    font-weight: 800;
   }
 
   .proceso-content p {
     font-size: 0.95rem;
+    font-weight: 600;
   }
 }

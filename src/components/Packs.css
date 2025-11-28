@@ -252,7 +252,40 @@
   }
   
   .price-tag-inline.consultar-btn {
-    width: 60%;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0;
+    width: 43%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-color: #ffaa5b9e;
+  }
+}
+
+@media (max-width: 380px) {
+  .price-tag-inline.consultar-btn {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0;
+    width: 43%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-color: #ffaa5b9e;
+  }
+}
+
+@media (max-width: 320px) {
+  .price-tag-inline.consultar-btn {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0;
+    width: 43%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-color: #ffaa5b9e;
   }
 }
 

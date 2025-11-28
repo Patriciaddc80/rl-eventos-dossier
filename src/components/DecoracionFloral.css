@@ -135,11 +135,14 @@
   }
 
   .btn-consultar {
-    max-width: 90%;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0;
+    width: 43%;
+    max-width: 100%;
+    padding: 10px;
     font-size: 0.9rem;
-    padding: var(--spacing-sm) var(--spacing-md);
-    min-height: 44px; /* Área táctil mínima recomendada */
-    margin: var(--spacing-sm) auto;
+    border-color: #ffaa5b9e;
   }
 }
 
@@ -149,11 +152,14 @@
 
 @media (max-width: 380px) {
   .btn-consultar {
-    max-width: 85%;
-    font-size: 0.85rem;
-    padding: 10px var(--spacing-sm);
-    min-height: 42px;
-    margin: var(--spacing-xs) auto;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0;
+    width: 43%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-color: #ffaa5b9e;
   }
 }
 
@@ -163,11 +169,14 @@
 
 @media (max-width: 320px) {
   .btn-consultar {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0;
+    width: 43%;
     max-width: 100%;
-    font-size: 0.8rem;
-    padding: 8px var(--spacing-xs);
-    min-height: 40px;
-    margin: var(--spacing-xs) auto;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-color: #ffaa5b9e;
   }
 }
 

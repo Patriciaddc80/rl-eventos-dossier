@@ -188,5 +188,42 @@
     font-size: 0.65rem;
     line-height: 1.3;
   }
+
+  .pricing-card .btn-consultar {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0;
+    width: 43%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-color: #ffaa5b9e;
+  }
+}
+
+@media (max-width: 380px) {
+  .pricing-card .btn-consultar {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0;
+    width: 43%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-color: #ffaa5b9e;
+  }
+}
+
+@media (max-width: 320px) {
+  .pricing-card .btn-consultar {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0;
+    width: 43%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-color: #ffaa5b9e;
+  }
 }
 
