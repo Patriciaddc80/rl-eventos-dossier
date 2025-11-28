@@ -11,12 +11,13 @@
 .proceso-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-md);
-  max-width: 800px;
+  gap: 24px;
+  max-width: 600px;
   margin: var(--spacing-xl) auto 0;
   width: 100%;
   box-sizing: border-box;
   padding: 0 var(--spacing-md);
+  justify-items: center;
 }
 
 .proceso-step {
@@ -24,15 +25,17 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: var(--spacing-lg);
+  padding: 20px;
   background: var(--color-white);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
   border: 1px solid var(--color-primary);
-  min-height: 140px;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1;
   justify-content: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
   position: relative;
   margin-top: 30px;
 }
@@ -89,17 +92,18 @@
 @media (max-width: 767px) {
   .proceso-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-    max-width: 800px;
+    gap: 16px;
+    max-width: 500px;
     width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
+    justify-items: center;
   }
 
   .proceso-step {
-    padding: var(--spacing-sm);
-    min-height: 100px;
-    gap: var(--spacing-xs);
+    max-width: 100%;
+    padding: 16px;
+    gap: 8px;
     margin-top: 20px;
   }
 
@@ -125,17 +129,18 @@
   .proceso-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 800px;
+    gap: 12px;
+    max-width: 400px;
     width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
+    justify-items: center;
   }
   
   .proceso-step {
-    padding: var(--spacing-sm);
-    min-height: 100px;
-    gap: var(--spacing-xs);
+    max-width: 100%;
+    padding: 12px;
+    gap: 6px;
     margin-top: 18px;
   }
   
@@ -148,13 +153,13 @@
   }
   
   .proceso-content h3 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     margin-bottom: 4px;
     line-height: 1.2;
   }
   
   .proceso-content p {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     line-height: 1.25;
     margin: 0;
   }
@@ -165,17 +170,18 @@
   .proceso-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    max-width: 800px;
+    gap: 10px;
+    max-width: 340px;
     width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
+    justify-items: center;
   }
   
   .proceso-step {
-    padding: var(--spacing-xs);
-    min-height: 90px;
-    gap: var(--spacing-xs);
+    max-width: 100%;
+    padding: 10px;
+    gap: 5px;
     margin-top: 15px;
   }
   
@@ -203,16 +209,17 @@
   .proceso-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    max-width: 800px;
+    gap: 8px;
+    max-width: 300px;
     width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
+    justify-items: center;
   }
   
   .proceso-step {
-    padding: var(--spacing-xs);
-    min-height: 80px;
+    max-width: 100%;
+    padding: 8px;
     gap: 4px;
     margin-top: 12px;
   }
@@ -236,22 +243,46 @@
   }
 }
 
-/* Pantallas medianas - 3 columnas */
+/* Pantallas medianas y grandes - mantener grid 2x2 */
 @media (min-width: 768px) {
   .proceso-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 700px;
+  }
+
+  .proceso-step {
+    max-width: 320px;
+    padding: 24px;
+    margin-top: 35px;
+  }
+
+  .proceso-number {
+    width: 55px;
+    height: 55px;
+    font-size: 1.4rem;
+    top: -35px;
+  }
+
+  .proceso-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .proceso-content p {
+    font-size: 0.9rem;
   }
 }
 
 /* Pantallas grandes */
 @media (min-width: 1024px) {
   .proceso-container {
-    gap: var(--spacing-lg);
+    gap: 35px;
+    max-width: 750px;
   }
 
   .proceso-step {
-    padding: var(--spacing-xl);
-    min-height: 160px;
+    max-width: 350px;
+    padding: 28px;
     margin-top: 40px;
   }
 
@@ -267,6 +298,6 @@
   }
 
   .proceso-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
