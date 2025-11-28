@@ -8,7 +8,7 @@ const testimonios = [
     quote: (
       <>
         <strong>INMEJORABLES!</strong>
-        <br /><br />
+        <br />
         Estoy muy orgullosa, por haber encontrado esta gran empresa. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo.
       </>
     ),
@@ -21,7 +21,7 @@ const testimonios = [
     quote: (
       <>
         <strong>MÁGICO!</strong>
-        <br /><br />
+        <br />
         Rocío transformó nuestra visión en una boda perfecta. Su atención al detalle, creatividad y profesionalidad hicieron que cada momento fuera mágico. No solo organizó nuestro día especial, sino que nos acompañó en cada paso del camino con cariño y dedicación.
       </>
     ),
@@ -34,7 +34,7 @@ const testimonios = [
     quote: (
       <>
         <strong>ENSUEÑO!</strong>
-        <br /><br />
+        <br />
         Desde el minuto cero me has ofrecido una mano que me ha guiado durante casi dos años para organizar una boda de ensueño. Gracias por tu dedicación e implicación.
       </>
     ),
@@ -61,7 +61,7 @@ const testimonios = [
       <>
         <strong>INSUPERABLES!!</strong>
         <br />
-        Estoy muy orgullosa, por haber encontrado esta gran empresa. Y sobre todo después de haberlos tratado puedo decir que es una gran empresa que ahora ya forman parte de nuestras vidas. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo. Bueno ahora ya digo bien alto que rocio y su empresa son la familia que llegue a contrastar siendo empresa y se fue siendo más que familia. Gracias.
+         Estoy muy orgullosa, por haber encontrado esta gran empresa. Y sobre todo después de haberlos tratado puedo decir que es una gran empresa que ahora ya forman parte de nuestras vidas. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo. Bueno ahora ya digo bien alto que rocio y su empresa son la familia que llegue a contrastar siendo empresa y se fue siendo más que familia. Gracias .
       </>
     ),
     author: 'Ana Cristina',
