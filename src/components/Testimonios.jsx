@@ -26,14 +26,26 @@ const testimonios = [
   {
     image: '/assets/img/image-azucena-1001.webp',
     alt: 'Boda de Azucena',
-    quote: 'Excelencia!! <br/> Fue el regalo de los hermanos de la novia a los novios y la verdad es que fue la idea mejor que pudimos tener ya que así los novios disfrutaron más de su día. Todo salió perfecto y el equipo de Rocio y Rocio estuvieron perfectos. Gracias',
+    quote: (
+      <>
+        <strong>EXCELENCIA!</strong>
+        <br /><br />
+        Fue el regalo de los hermanos de la novia a los novios y la verdad es que fue la idea mejor que pudimos tener ya que así los novios disfrutaron más de su día. Todo salió perfecto y el equipo de Rocio y Rocio estuvieron perfectos. Gracias
+      </>
+    ),
     author: 'Azucena',
     date: '28/10/2024'
   },
   {
     image: '/assets/img/image-ana-cristina-1002.webp',
     alt: 'Boda de Ana Cristina',
-    quote: 'Insuperables!! <br/>Estoy muy orgullosa, por haber encontrado esta gran empresa. Y sobre todo después de haberlos tratado puedo decir que es una gran empresa que ahora ya forman parte de nuestras vidas. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo. Bueno ahora ya digo bien alto que rocio y su empresa son la familia que llegue a contrastar siendo empresa y se fue siendo más que familia. Gracias.',
+    quote: (
+      <>
+        <strong>INSUPERABLES!!</strong>
+        <br /><br />
+        Estoy muy orgullosa, por haber encontrado esta gran empresa. Y sobre todo después de haberlos tratado puedo decir que es una gran empresa que ahora ya forman parte de nuestras vidas. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo. Bueno ahora ya digo bien alto que rocio y su empresa son la familia que llegue a contrastar siendo empresa y se fue siendo más que familia. Gracias.
+      </>
+    ),
     author: 'Ana Cristina',
     date: '8/10/2023'
   }
