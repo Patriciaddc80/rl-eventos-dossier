@@ -226,6 +226,7 @@
   font-style: italic;
   margin: 0 0 var(--spacing-xs) 0;
   padding: 0;
+  padding-left: var(--spacing-lg);
   padding-right: var(--spacing-md);
   border: none;
   position: relative;
@@ -238,6 +239,32 @@
   overflow-wrap: break-word;
   hyphens: auto;
   min-width: 0;
+}
+
+.testimonial-quote::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-family: Georgia, serif;
+  opacity: 0.8;
+}
+
+.testimonial-quote::after {
+  content: '"';
+  position: absolute;
+  right: var(--spacing-md);
+  bottom: -0.5rem;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-family: Georgia, serif;
+  opacity: 0.8;
 }
 
 .testimonial-meta {
