@@ -10,36 +10,36 @@
 
 .proceso-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-md);
-  margin-top: var(--spacing-xl);
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 var(--spacing-md);
+  max-width: 800px;
+  margin: var(--spacing-xl) auto 0;
   width: 100%;
   box-sizing: border-box;
+  padding: 0 var(--spacing-md);
 }
 
 .proceso-step {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: center;
+  padding: var(--spacing-lg);
   background: var(--color-white);
   border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
-  border: 1px solid var(--color-border);
-  aspect-ratio: 1;
+  border: 1px solid var(--color-primary);
+  min-height: 140px;
+  justify-content: center;
+  gap: var(--spacing-sm);
   position: relative;
-  text-align: center;
   margin-top: 30px;
 }
 
 .proceso-step:hover {
   transform: translateY(-4px);
-  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
 }
 
 .proceso-number {
@@ -89,15 +89,17 @@
 @media (max-width: 767px) {
   .proceso-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    max-width: 100%;
-    margin-top: var(--spacing-lg);
+    gap: var(--spacing-md);
+    max-width: 800px;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .proceso-step {
-    padding: 6px 10px;
-    aspect-ratio: 1;
-    min-height: 0;
+    padding: var(--spacing-sm);
+    min-height: 100px;
+    gap: var(--spacing-xs);
     margin-top: 20px;
   }
 
@@ -109,7 +111,7 @@
   }
 
   .proceso-content h3 {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     margin-bottom: 4px;
   }
 
@@ -121,36 +123,38 @@
 
 @media (max-width: 480px) {
   .proceso-container {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    max-width: 50%;
-    margin-top: var(--spacing-md);
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
   
   .proceso-step {
-    padding: 6px 8px;
-    aspect-ratio: 1;
-    min-height: 0;
+    padding: var(--spacing-sm);
+    min-height: 100px;
+    gap: var(--spacing-xs);
     margin-top: 18px;
-    border-radius: var(--border-radius-sm);
   }
   
   .proceso-number {
     width: 28px;
     height: 28px;
-    font-size: 0.60rem;
+    font-size: 0.85rem;
     top: -14px;
     box-shadow: 0 2px 8px rgba(211, 175, 54, 0.4);
   }
   
   .proceso-content h3 {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     margin-bottom: 4px;
     line-height: 1.2;
   }
   
   .proceso-content p {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     line-height: 1.25;
     margin: 0;
   }
@@ -159,31 +163,37 @@
 /* Pantallas de 380px - cajitas más pequeñas */
 @media (max-width: 380px) {
   .proceso-container {
-    gap: 2px;
-    margin-top: var(--spacing-sm);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 800px;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
   
   .proceso-step {
-    padding: 5px 6px;
+    padding: var(--spacing-xs);
+    min-height: 90px;
+    gap: var(--spacing-xs);
     margin-top: 15px;
-    border-radius: 6px;
   }
   
   .proceso-number {
     width: 24px;
     height: 24px;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     top: -12px;
   }
   
   .proceso-content h3 {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     margin-bottom: 3px;
     line-height: 1.15;
   }
   
   .proceso-content p {
-    font-size: 0.55rem;
+    font-size: 0.65rem;
     line-height: 1.2;
   }
 }
@@ -191,74 +201,57 @@
 /* Pantallas de 320px - cajitas aún más pequeñas */
 @media (max-width: 320px) {
   .proceso-container {
-    gap: 5px;
-    margin-top: var(--spacing-sm);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 800px;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
   
   .proceso-step {
-    padding: 4px 5px;
+    padding: var(--spacing-xs);
+    min-height: 80px;
+    gap: 4px;
     margin-top: 12px;
-    border-radius: 5px;
   }
   
   .proceso-number {
     width: 22px;
     height: 22px;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     top: -11px;
   }
   
   .proceso-content h3 {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     margin-bottom: 2px;
     line-height: 1.1;
   }
   
   .proceso-content p {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     line-height: 1.15;
   }
 }
 
-/* Pantallas medianas - 2 columnas */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Pantallas medianas - 3 columnas */
+@media (min-width: 768px) {
   .proceso-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-    padding: 0 var(--spacing-lg);
-  }
-
-  .proceso-step {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    margin-top: 35px;
-  }
-
-  .proceso-number {
-    width: 55px;
-    height: 55px;
-    font-size: 1.4rem;
-    top: -35px;
-  }
-
-  .proceso-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .proceso-content p {
-    font-size: 0.9rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Pantallas grandes - 4 columnas */
+/* Pantallas grandes */
 @media (min-width: 1024px) {
   .proceso-container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--spacing-xl);
-    max-width: 1400px;
+    gap: var(--spacing-lg);
   }
 
   .proceso-step {
-    padding: var(--spacing-md) var(--spacing-xl);
+    padding: var(--spacing-xl);
+    min-height: 160px;
     margin-top: 40px;
   }
 
@@ -270,6 +263,10 @@
   }
 
   .proceso-content h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+  }
+
+  .proceso-content p {
+    font-size: 1rem;
   }
 }

@@ -112,8 +112,10 @@
 
   .btn-consultar {
     max-width: 280px;
-    font-size: 1rem;
-    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 0.95rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    min-height: 44px; /* Área táctil mínima recomendada */
+    margin: var(--spacing-md) auto;
   }
 }
 
@@ -133,8 +135,39 @@
   }
 
   .btn-consultar {
+    max-width: 90%;
+    font-size: 0.9rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    min-height: 44px; /* Área táctil mínima recomendada */
+    margin: var(--spacing-sm) auto;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MÓVIL MUY PEQUEÑO (< 380px)
+   ======================================== */
+
+@media (max-width: 380px) {
+  .btn-consultar {
+    max-width: 85%;
+    font-size: 0.85rem;
+    padding: 10px var(--spacing-sm);
+    min-height: 42px;
+    margin: var(--spacing-xs) auto;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MÓVIL EXTRA PEQUEÑO (< 320px)
+   ======================================== */
+
+@media (max-width: 320px) {
+  .btn-consultar {
     max-width: 100%;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    padding: 8px var(--spacing-xs);
+    min-height: 40px;
+    margin: var(--spacing-xs) auto;
   }
 }
 
