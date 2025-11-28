@@ -75,6 +75,71 @@ const Testimonios = () => {
   const [expandedTestimonials, setExpandedTestimonials] = useState({})
   const intervalRef = useRef(null)
 
+  // Función para extraer el texto del quote (sin el strong)
+  const getTextFromQuote = (quote) => {
+    if (typeof quote === 'string') return quote
+    if (quote?.props?.children) {
+      const children = Array.isArray(quote.props.children) ? quote.props.children : [quote.props.children]
+      return children
+        .filter(child => {
+          if (typeof child === 'string') return true
+          if (child?.type === 'strong') return false
+          if (child?.type === 'br') return false
+          return false
+        })
+        .map(child => typeof child === 'string' ? child : '')
+        .join(' ')
+        .trim()
+    }
+    return ''
+  }
+
+  // Función para determinar si un testimonio necesita el botón de expandir
+  const needsExpandButton = (quote) => {
+    const text = getTextFromQuote(quote)
+    // Aproximadamente 3 líneas = ~150 caracteres (considerando line-height 1.75 y font-size 0.875rem)
+    return text.length > 150
+  }
+
+  // Función para truncar el texto manteniendo el strong
+  const truncateQuote = (quote, maxLength = 150) => {
+    if (typeof quote === 'string') {
+      const truncated = quote.substring(0, maxLength)
+      const lastSpace = truncated.lastIndexOf(' ')
+      return quote.substring(0, lastSpace > 0 ? lastSpace : maxLength) + '...'
+    }
+    
+    if (quote?.props?.children) {
+      const children = Array.isArray(quote.props.children) ? quote.props.children : [quote.props.children]
+      const strongElement = children.find(child => child?.type === 'strong')
+      const textChildren = children.filter(child => {
+        if (typeof child === 'string') return true
+        if (child?.type === 'strong') return false
+        if (child?.type === 'br') return false
+        return false
+      })
+      
+      const fullText = textChildren
+        .map(child => typeof child === 'string' ? child : '')
+        .join(' ')
+        .trim()
+      
+      const truncatedText = fullText.substring(0, maxLength)
+      const lastSpace = truncatedText.lastIndexOf(' ')
+      const finalText = fullText.substring(0, lastSpace > 0 ? lastSpace : maxLength) + '...'
+      
+      return (
+        <>
+          {strongElement}
+          {' '}
+          {finalText}
+        </>
+      )
+    }
+    
+    return quote
+  }
+
   // Preload agresivo de todas las imágenes de testimonios
   useEffect(() => {
     testimonios.forEach((testimonio, index) => {
@@ -176,7 +241,7 @@ const Testimonios = () => {
                       </div>
                       
                       <blockquote className="testimonial-quote">
-                        {index === 4 ? (
+                        {needsExpandButton(testimonio.quote) ? (
                           <>
                             {expandedTestimonials[index] ? (
                               <>
@@ -191,9 +256,7 @@ const Testimonios = () => {
                               </>
                             ) : (
                               <>
-                                <strong>INSUPERABLES!!</strong>
-                                <br />
-                                Estoy muy orgullosa, por haber encontrado esta gran empresa. Y sobre todo después de haberlos tratado puedo decir que es una gran empresa que ahora ya forman parte de nuestras vidas. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo.
+                                {truncateQuote(testimonio.quote)}
                                 <button 
                                   className="expand-text-btn"
                                   onClick={() => setExpandedTestimonials({...expandedTestimonials, [index]: true})}

@@ -112,6 +112,147 @@
 .nav-menu.active li:nth-child(9) { transition-delay: 0.45s; }
 .nav-menu.active li:nth-child(10) { transition-delay: 0.5s; }
 .nav-menu.active li:nth-child(11) { transition-delay: 0.55s; }
+.nav-menu.active li:nth-child(12) { transition-delay: 0.6s; }
+.nav-menu.active li:nth-child(13) { transition-delay: 0.65s; }
+
+/* Logo en el menú */
+.nav-menu-logo-item {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid rgba(212, 184, 150, 0.2);
+  margin-bottom: var(--spacing-sm);
+}
+
+.nav-menu-logo-wrapper {
+  width: 80px;
+  height: 80px;
+  background: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+  border: 2px solid rgba(212, 184, 150, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Botón Visita nuestra web */
+.nav-menu-web-item {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(212, 184, 150, 0.2);
+}
+
+.nav-menu-web-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, rgba(212, 184, 150, 0.25) 0%, rgba(212, 184, 150, 0.15) 100%);
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 184, 150, 0.3);
+}
+
+.nav-menu-web-link:hover {
+  background: linear-gradient(135deg, rgba(212, 184, 150, 0.35) 0%, rgba(212, 184, 150, 0.25) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 184, 150, 0.4);
+}
+
+.nav-menu-web-link svg {
+  transition: transform 0.3s ease;
+}
+
+.nav-menu-web-link:hover svg {
+  transform: scale(1.1) rotate(15deg);
+}
+
+/* Redes sociales en el menú */
+.nav-menu-social-item {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(212, 184, 150, 0.2);
+}
+
+.nav-menu-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.nav-menu-social-link {
+  width: 50px;
+  height: 50px;
+  background: rgba(30, 30, 30, 0.6);
+  border: 2px solid rgba(212, 184, 150, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8d4b8;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menu-social-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(212, 184, 150, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.nav-menu-social-link:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-menu-social-link svg {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu-social-link:hover {
+  border-color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.nav-menu-social-link:hover svg {
+  transform: scale(1.15);
+}
+
+.nav-menu-social-instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: var(--color-white);
+}
+
+.nav-menu-social-whatsapp:hover {
+  background: #25D366;
+  color: var(--color-white);
+}
 
 /* ========================================
    HEADER VERTICAL CON PESTAÑAS (LADO DERECHO)
