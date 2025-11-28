@@ -8,7 +8,7 @@ const testimonios = [
     quote: (
       <>
         <strong>INMEJORABLES!</strong>
-        <br />
+        {' '}
         Estoy muy orgullosa, por haber encontrado esta gran empresa. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo.
       </>
     ),
@@ -21,7 +21,7 @@ const testimonios = [
     quote: (
       <>
         <strong>MÁGICO!</strong>
-        <br />
+        {' '}
         Rocío transformó nuestra visión en una boda perfecta. Su atención al detalle, creatividad y profesionalidad hicieron que cada momento fuera mágico. No solo organizó nuestro día especial, sino que nos acompañó en cada paso del camino con cariño y dedicación.
       </>
     ),
@@ -34,7 +34,7 @@ const testimonios = [
     quote: (
       <>
         <strong>ENSUEÑO!</strong>
-        <br />
+        {' '}
         Desde el minuto cero me has ofrecido una mano que me ha guiado durante casi dos años para organizar una boda de ensueño. Gracias por tu dedicación e implicación.
       </>
     ),
@@ -47,7 +47,7 @@ const testimonios = [
     quote: (
       <>
         <strong>EXCELENCIA!</strong>
-        <br />
+        {' '}
         Fue el regalo de los hermanos de la novia a los novios y la verdad es que fue la idea mejor que pudimos tener ya que así los novios disfrutaron más de su día. Todo salió perfecto y el equipo de Rocio y Rocio estuvieron perfectos. Gracias
       </>
     ),
@@ -60,8 +60,8 @@ const testimonios = [
     quote: (
       <>
         <strong>INSUPERABLES!!</strong>
-        <br />
-         Estoy muy orgullosa, por haber encontrado esta gran empresa. Y sobre todo después de haberlos tratado puedo decir que es una gran empresa que ahora ya forman parte de nuestras vidas. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo. Bueno ahora ya digo bien alto que rocio y su empresa son la familia que llegue a contrastar siendo empresa y se fue siendo más que familia. Gracias .
+        {' '}
+        Estoy muy orgullosa, por haber encontrado esta gran empresa. Y sobre todo después de haberlos tratado puedo decir que es una gran empresa que ahora ya forman parte de nuestras vidas. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo. Bueno ahora ya digo bien alto que rocio y su empresa son la familia que llegue a contrastar siendo empresa y se fue siendo más que familia. Gracias .
       </>
     ),
     author: 'Ana Cristina',
@@ -72,6 +72,7 @@ const testimonios = [
 const Testimonios = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+  const [expandedTestimonials, setExpandedTestimonials] = useState({})
   const intervalRef = useRef(null)
 
   // Preload agresivo de todas las imágenes de testimonios
@@ -175,7 +176,37 @@ const Testimonios = () => {
                       </div>
                       
                       <blockquote className="testimonial-quote">
-                        {testimonio.quote}
+                        {index === 4 ? (
+                          <>
+                            {expandedTestimonials[index] ? (
+                              <>
+                                {testimonio.quote}
+                                <button 
+                                  className="expand-text-btn"
+                                  onClick={() => setExpandedTestimonials({...expandedTestimonials, [index]: false})}
+                                  aria-label="Contraer texto"
+                                >
+                                  −
+                                </button>
+                              </>
+                            ) : (
+                              <>
+                                <strong>INSUPERABLES!!</strong>
+                                <br />
+                                Estoy muy orgullosa, por haber encontrado esta gran empresa. Y sobre todo después de haberlos tratado puedo decir que es una gran empresa que ahora ya forman parte de nuestras vidas. Transmiten confianza, te dan una cercanía, son inmejorables en su trabajo.
+                                <button 
+                                  className="expand-text-btn"
+                                  onClick={() => setExpandedTestimonials({...expandedTestimonials, [index]: true})}
+                                  aria-label="Expandir texto"
+                                >
+                                  +
+                                </button>
+                              </>
+                            )}
+                          </>
+                        ) : (
+                          testimonio.quote
+                        )}
                       </blockquote>
                       
                       <div className="testimonial-meta">
