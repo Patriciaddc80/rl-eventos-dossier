@@ -563,21 +563,11 @@
 }
 
 .proceso-number {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-primary-dark) 100%
-  );
+  width: 30px;
+  height: 31px;
   color: var(--color-white);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: var(--font-weight-black);
   font-size: 1.5rem;
-  flex-shrink: 0;
   box-shadow: var(--shadow-sm);
 }
 
