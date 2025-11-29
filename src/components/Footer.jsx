@@ -29,7 +29,7 @@ const Footer = () => {
                 className="footer-logo"
                 loading="lazy"
                 decoding="async"
-                fetchPriority="low"
+                fetchpriority="low"
               />
             </button>
             <h3 className="footer-brand-name">Rocío López</h3>

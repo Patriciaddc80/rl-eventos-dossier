@@ -2,14 +2,7 @@ import { useEffect } from 'react'
 import './Hero.css'
 
 const Hero = () => {
-  // Preload inmediato usando Image constructor (más rápido que preload link)
-  useEffect(() => {
-    const logoImg = new Image()
-    logoImg.src = '/assets/img/logo.png'
-    
-    const ringsImg = new Image()
-    ringsImg.src = '/assets/img/ring-wedding3.png'
-  }, [])
+  // Las imágenes ya están preloadadas en index.html, no necesitamos precargar de nuevo
 
   return (
     <section id="menu" className="hero">
@@ -22,7 +15,7 @@ const Hero = () => {
             className="rings-img" 
             width="200"
             height="60"
-            fetchPriority="high"
+            fetchpriority="high"
             decoding="async"
           />
         </div>
@@ -33,7 +26,7 @@ const Hero = () => {
             className="logo-main" 
             width="200" 
             height="200"
-            fetchPriority="high"
+            fetchpriority="high"
             decoding="async"
           />
         </div>

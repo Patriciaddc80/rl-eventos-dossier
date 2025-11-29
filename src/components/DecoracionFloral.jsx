@@ -1,59 +1,65 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import './DecoracionFloral.css'
 
+const floralImages = [
+  '/assets/deco-florales/1130.webp',
+  '/assets/deco-florales/1150.webp',
+  '/assets/deco-florales/12755.webp',
+  '/assets/deco-florales/12760.webp',
+  '/assets/deco-florales/12762.webp',
+  '/assets/deco-florales/12765.webp',
+  '/assets/deco-florales/12766.webp',
+  '/assets/deco-florales/12767.webp',
+  '/assets/deco-florales/12769.webp',
+  '/assets/deco-florales/12771.webp',
+  '/assets/deco-florales/1540_heicx.com_convert.webp',
+  '/assets/deco-florales/169.webp',
+  '/assets/deco-florales/1780_heicx.com_convert.webp',
+  '/assets/deco-florales/1899_heicx.com_convert.webp',
+  '/assets/deco-florales/1927238a-844d-4332-b326-dc496df3a371-1_all_2034.webp',
+  '/assets/deco-florales/2045_heicx.com_convert.webp',
+  '/assets/deco-florales/2074.webp',
+  '/assets/deco-florales/2091.webp',
+  '/assets/deco-florales/2227_heicx.com_convert.webp',
+  '/assets/deco-florales/2258_heicx.com_convert.webp',
+  '/assets/deco-florales/2266.webp',
+  '/assets/deco-florales/261.webp',
+  '/assets/deco-florales/371_heicx.com_convert.webp',
+  '/assets/deco-florales/459.webp',
+  '/assets/deco-florales/659_heicx.com_convert.webp',
+  '/assets/deco-florales/695_heicx.com_convert.webp',
+  '/assets/deco-florales/696.webp',
+  '/assets/deco-florales/7217.webp',
+  '/assets/deco-florales/7219.webp',
+  '/assets/deco-florales/731_heicx.com_convert.webp'
+]
+
 const DecoracionFloral = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const intervalRef = useRef(null)
 
-  const floralImages = [
-    '/assets/deco-florales/1130.webp',
-    '/assets/deco-florales/1150.webp',
-    '/assets/deco-florales/12755.webp',
-    '/assets/deco-florales/12760.webp',
-    '/assets/deco-florales/12762.webp',
-    '/assets/deco-florales/12765.webp',
-    '/assets/deco-florales/12766.webp',
-    '/assets/deco-florales/12767.webp',
-    '/assets/deco-florales/12769.webp',
-    '/assets/deco-florales/12771.webp',
-    '/assets/deco-florales/1540_heicx.com_convert.webp',
-    '/assets/deco-florales/169.webp',
-    '/assets/deco-florales/1780_heicx.com_convert.webp',
-    '/assets/deco-florales/1899_heicx.com_convert.webp',
-    '/assets/deco-florales/1927238a-844d-4332-b326-dc496df3a371-1_all_2034.webp',
-    '/assets/deco-florales/2045_heicx.com_convert.webp',
-    '/assets/deco-florales/2074.webp',
-    '/assets/deco-florales/2091.webp',
-    '/assets/deco-florales/2227_heicx.com_convert.webp',
-    '/assets/deco-florales/2258_heicx.com_convert.webp',
-    '/assets/deco-florales/2266.webp',
-    '/assets/deco-florales/261.webp',
-    '/assets/deco-florales/371_heicx.com_convert.webp',
-    '/assets/deco-florales/459.webp',
-    '/assets/deco-florales/659_heicx.com_convert.webp',
-    '/assets/deco-florales/695_heicx.com_convert.webp',
-    '/assets/deco-florales/696.webp',
-    '/assets/deco-florales/7217.webp',
-    '/assets/deco-florales/7219.webp',
-    '/assets/deco-florales/731_heicx.com_convert.webp'
-  ]
-
   // Preload agresivo de TODAS las imágenes del slider para carga instantánea
   useEffect(() => {
+    // Imágenes que ya están preloadadas en index.html (no duplicar)
+    const alreadyPreloaded = new Set([
+      '/assets/deco-florales/1130.webp',
+      '/assets/deco-florales/1150.webp'
+    ])
+    
     // Preload inmediato de todas las imágenes usando Image constructor (más rápido)
     floralImages.forEach((src, index) => {
       const img = new Image()
       img.src = src
       
-      // Para las primeras imágenes críticas, también usar preload link
-      if (index < 5) {
+      // Solo crear preload links para imágenes que no están ya preloadadas en HTML
+      if (index < 5 && !alreadyPreloaded.has(src)) {
         const link = document.createElement('link')
         link.rel = 'preload'
         link.as = 'image'
         link.href = src
-        link.fetchPriority = index === 0 ? 'high' : 'auto'
+        link.setAttribute('fetchpriority', index === 0 ? 'high' : 'auto')
         document.head.appendChild(link)
-      } else {
+      } else if (index >= 5) {
         // Para el resto, usar prefetch
         const link = document.createElement('link')
         link.rel = 'prefetch'
@@ -70,7 +76,7 @@ const DecoracionFloral = () => {
     }, 5000)
 
     return () => clearInterval(intervalRef.current)
-  }, [floralImages.length])
+  }, [])
 
   // Prefetch agresivo: precargar las siguientes 3 imágenes
   useEffect(() => {
@@ -79,15 +85,15 @@ const DecoracionFloral = () => {
       const nextImg = new Image()
       nextImg.src = floralImages[nextIndex]
     }
-  }, [currentIndex, floralImages])
+  }, [currentIndex])
 
   const nextImage = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % floralImages.length)
-  }, [floralImages.length])
+  }, [])
 
   const prevImage = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + floralImages.length) % floralImages.length)
-  }, [floralImages.length])
+  }, [])
 
   const goToImage = (index) => {
     setCurrentIndex(index)
@@ -127,7 +133,8 @@ const DecoracionFloral = () => {
                   src={floralImages[currentIndex]} 
                   alt={`Decoración floral ${currentIndex + 1}`}
                   className="floral-main-image fade-in"
-                  fetchPriority={currentIndex === 0 ? 'high' : 'auto'}
+                  // eslint-disable-next-line react/no-unknown-property
+                  fetchpriority={currentIndex === 0 ? 'high' : 'auto'}
                   decoding="async"
                   loading={currentIndex === 0 ? 'eager' : 'lazy'}
                 />
@@ -172,7 +179,8 @@ const DecoracionFloral = () => {
                         alt={`Miniatura ${index + 1}`} 
                         loading="lazy"
                         decoding="async"
-                        fetchPriority="low"
+                        // eslint-disable-next-line react/no-unknown-property
+                        fetchpriority="low"
                       />
                     </button>
                   ))}

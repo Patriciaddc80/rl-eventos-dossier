@@ -25,7 +25,7 @@ const QuienesSomos = () => {
               width="350" 
               height="280"
               decoding="async"
-              fetchPriority="low"
+              fetchpriority="low"
             />
           </div>
           <div className="text-col">

@@ -69,7 +69,7 @@
 
 .service-card p {
   color: #000;
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.7;
   font-weight: 500;
 }
@@ -127,7 +127,7 @@
 }
 
 .service-extra-item span {
-  font-size: 0.95rem;
+  font-size: 16px;
   color: var(--color-text);
   font-weight: var(--font-weight-medium);
 }
@@ -150,7 +150,6 @@
 
 /* Grid de 3 columnas para packs */
 .pack-grid-inline {
-
   gap: 20px;
   max-width: 900px;
   width: 100%;
@@ -499,7 +498,6 @@
 
 /* Grid de 3 columnas para rincones inline */
 .rincon-grid-inline {
-
   gap: 20px;
   max-width: 800px;
   width: 100%;
@@ -564,7 +562,7 @@
 
 .proceso-number {
   width: 30px;
-  height: 31px;
+  height: 30px;
   color: var(--color-white);
   border-radius: 50%;
   font-size: 1.5rem;
@@ -593,7 +591,7 @@
   .proceso-carousel-container {
     display: none !important;
   }
-  
+
   .proceso-timeline {
     display: flex !important;
   }
@@ -604,7 +602,7 @@
   .proceso-timeline {
     display: none;
   }
-  
+
   .proceso-carousel-container {
     display: flex;
     flex-direction: column;
@@ -616,7 +614,7 @@
     padding: 0 var(--spacing-md);
     box-sizing: border-box;
   }
-  
+
   .proceso-carousel-wrapper {
     position: relative;
     width: 100%;
@@ -627,14 +625,14 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .proceso-carousel-track {
     display: flex;
     position: relative;
     width: 100%;
     max-width: 100%;
   }
-  
+
   .proceso-carousel-slide {
     min-width: 100%;
     flex-shrink: 0;
@@ -653,11 +651,11 @@
     width: 100%;
     max-width: 100%;
   }
-  
+
   .proceso-carousel-slide.active {
     display: flex;
   }
-  
+
   @keyframes fadeInSlide {
     from {
       opacity: 0;
@@ -668,7 +666,7 @@
       transform: translateY(0);
     }
   }
-  
+
   .proceso-carousel-number {
     font-size: 3rem;
     font-weight: var(--font-weight-black);
@@ -679,7 +677,7 @@
     display: block;
     width: 100%;
   }
-  
+
   .proceso-carousel-content {
     width: 100%;
     max-width: 100%;
@@ -689,7 +687,7 @@
     justify-content: center;
     text-align: center;
   }
-  
+
   .proceso-carousel-content h3 {
     font-size: 1.3rem;
     font-weight: var(--font-weight-bold);
@@ -699,7 +697,7 @@
     width: 100%;
     display: block;
   }
-  
+
   .proceso-carousel-content p {
     font-size: 0.95rem;
     color: var(--color-text-lighter);
@@ -711,7 +709,7 @@
     display: block;
     padding: 0 10px;
   }
-  
+
   .proceso-carousel-indicators {
     display: flex;
     justify-content: center;
@@ -720,7 +718,7 @@
     margin-top: var(--spacing-lg);
     padding: var(--spacing-sm) 0;
   }
-  
+
   .proceso-indicator {
     width: 8px;
     height: 8px;
@@ -732,7 +730,7 @@
     border: none;
     padding: 0;
   }
-  
+
   .proceso-indicator.active {
     opacity: 1;
     width: 40px;
@@ -740,7 +738,7 @@
     border-radius: 2px;
     background: #d4b896;
   }
-  
+
   .proceso-indicator:hover {
     opacity: 0.7;
   }
@@ -1735,7 +1733,6 @@
 @media (min-width: 1024px) {
   .decoracion-floral-text {
     font-size: 16px;
-    padding: 25px;
     max-width: 800px;
   }
 }
@@ -1773,7 +1770,9 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out, left 0.8s ease-in-out;
+  transition:
+    opacity 0.8s ease-in-out,
+    left 0.8s ease-in-out;
   left: 100%;
   top: 0;
   display: block;
@@ -1922,7 +1921,7 @@
     height: 450px;
     min-height: 450px;
   }
-  
+
   #c > li {
     height: 100%;
   }
@@ -1933,7 +1932,7 @@
     object-fit: contain;
     object-position: center;
   }
-  
+
   #c > li.active {
     left: 0 !important;
   }
@@ -1962,7 +1961,7 @@
     object-fit: contain;
     object-position: center;
   }
-  
+
   .floral-carousel-btn {
     width: 35px;
     height: 35px;
@@ -1986,7 +1985,7 @@
   .floral-carousel-pagination .pagination-dot.active {
     width: 25px;
   }
-  .rincon-grid-inline{
-    grid-template-columns:4, 1fr;
+  .rincon-grid-inline {
+    grid-template-columns: 4, 1fr;
   }
 }

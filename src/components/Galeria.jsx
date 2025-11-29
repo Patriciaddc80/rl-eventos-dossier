@@ -138,7 +138,7 @@ const Galeria = () => {
                         alt={`${galeria.titulo} ${imgIndex + 1}`} 
                         loading="lazy"
                         decoding="async"
-                        fetchPriority="low"
+                        fetchpriority="low"
                       />
                     </div>
                   )

@@ -15,28 +15,12 @@ import Footer from './components/Footer'
 import './App.css'
 
 function App() {
-  // Preload global agresivo de TODAS las imágenes críticas al montar la app
+  // Las imágenes críticas ya están preloadadas en index.html
+  // Solo prefetch de imágenes secundarias que no están en el HTML
   useEffect(() => {
-    // Imágenes del Hero (máxima prioridad)
-    const criticalImages = [
-      '/assets/img/logo.png',
-      '/assets/img/ring-wedding3.png',
-      '/assets/deco-florales/1130.webp'
-    ]
-    
-    criticalImages.forEach(src => {
-      const img = new Image()
-      img.src = src
-    })
-
-    // Prefetch masivo de todas las demás imágenes en segundo plano
     const prefetchImages = [
-      '/assets/img/image36.jpeg',
-      '/assets/img/testimonial1.jpeg',
       '/assets/img/testimonial2.jpeg',
-      '/assets/img/testimonial3.jpeg',
-      '/assets/material-img/619.jpg',
-      '/assets/material-img/1521.jpg'
+      '/assets/img/testimonial3.jpeg'
     ]
 
     // Prefetch después de un pequeño delay para no bloquear la carga crítica

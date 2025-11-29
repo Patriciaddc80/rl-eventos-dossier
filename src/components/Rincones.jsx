@@ -1,16 +1,16 @@
 import { useEffect } from 'react'
 import './Rincones.css'
 
-const Rincones = () => {
-  const rincones = [
-    { icon: '/assets/img/wedding-invitation.png', label: 'Bienvenida' },
-    { icon: '/assets/img/fotomaton.png', label: 'Photocall' },
-    { icon: '/assets/img/candy-bar.png', label: 'Candy bar' },
-    { icon: '/assets/img/wedding-invitation.png', label: 'Libro de firmas' },
-    { icon: '/assets/img/codigo-de-vestimenta.png', label: 'Seating' },
-    { icon: '/assets/img/cockteleria.png', label: 'Copa bienvenida' }
-  ]
+const rincones = [
+  { icon: '/assets/img/wedding-invitation.png', label: 'Bienvenida' },
+  { icon: '/assets/img/fotomaton.png', label: 'Photocall' },
+  { icon: '/assets/img/candy-bar.png', label: 'Candy bar' },
+  { icon: '/assets/img/wedding-invitation.png', label: 'Libro de firmas' },
+  { icon: '/assets/img/codigo-de-vestimenta.png', label: 'Seating' },
+  { icon: '/assets/img/cockteleria.png', label: 'Copa bienvenida' }
+]
 
+const Rincones = () => {
   // Preload de todos los iconos
   useEffect(() => {
     rincones.forEach(rincon => {
@@ -41,7 +41,8 @@ const Rincones = () => {
                   width="50" 
                   height="50"
                   decoding="async"
-                  fetchPriority="low"
+                  // eslint-disable-next-line react/no-unknown-property
+                  fetchpriority="low"
                 />
                 <span>{rincon.label}</span>
               </div>

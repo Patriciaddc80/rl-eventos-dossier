@@ -152,7 +152,7 @@ const Testimonios = () => {
         link.rel = 'preload'
         link.as = 'image'
         link.href = testimonio.image
-        link.fetchPriority = 'high'
+        link.setAttribute('fetchpriority', 'high')
         document.head.appendChild(link)
       }
     })
@@ -227,7 +227,7 @@ const Testimonios = () => {
                           alt={testimonio.alt} 
                           loading="lazy"
                           decoding="async"
-                          fetchPriority={index === 0 ? "auto" : "low"}
+                          fetchpriority={index === 0 ? "auto" : "low"}
                         />
                         <div className="image-overlay"></div>
                       </div>

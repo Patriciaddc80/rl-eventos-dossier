@@ -1,39 +1,40 @@
 import { useEffect } from 'react'
 import './Servicios.css'
 
-const Servicios = () => {
-  const servicios = [
-    {
-      icon: '/assets/img/anillo-boda-preboda.png',
-      title: 'Diseño y Decoración',
-      description: 'Creamos ambientes únicos y elegantes que reflejan vuestra personalidad y sorprenden a los invitados.'
-    },
-    {
-      icon: '/assets/img/codigo-de-vestimenta.png',
-      title: 'Coordinación del Día B',
-      description: 'Controlamos tiempos, proveedores e imprevistos para que todo fluya con armonía.'
-    },
-    {
-      icon: '/assets/img/luna-de-miel.png',
-      title: 'Asesoría a Medida',
-      description: 'Os ayudamos a definir el estilo, optimizar presupuesto y dar forma a los detalles más especiales.'
-    }
-  ]
+const servicios = [
+  {
+    icon: '/assets/img/anillo-boda-preboda.png',
+    title: 'Diseño y Decoración',
+    description: 'Creamos ambientes únicos y elegantes que reflejan vuestra personalidad y sorprenden a los invitados.'
+  },
+  {
+    icon: '/assets/img/codigo-de-vestimenta.png',
+    title: 'Coordinación del Día B',
+    description: 'Controlamos tiempos, proveedores e imprevistos para que todo fluya con armonía.'
+  },
+  {
+    icon: '/assets/img/luna-de-miel.png',
+    title: 'Asesoría a Medida',
+    description: 'Os ayudamos a definir el estilo, optimizar presupuesto y dar forma a los detalles más especiales.'
+  }
+]
 
-  const serviciosExtra = [
-    {
-      icon: '/assets/img/wedding-invitation.png',
-      text: 'Invitaciones y papelería personalizada'
-    },
-    {
-      icon: '/assets/img/luna-de-miel.png',
-      text: 'Noche para novios Deluxe'
-    },
-    {
-      icon: '/assets/img/codigo-de-vestimenta.png',
-      text: 'Protocolo y etiqueta'
-    }
-  ]
+const serviciosExtra = [
+  {
+    icon: '/assets/img/wedding-invitation.png',
+    text: 'Invitaciones y papelería personalizada'
+  },
+  {
+    icon: '/assets/img/luna-de-miel.png',
+    text: 'Noche para novios Deluxe'
+  },
+  {
+    icon: '/assets/img/codigo-de-vestimenta.png',
+    text: 'Protocolo y etiqueta'
+  }
+]
+
+const Servicios = () => {
 
   // Preload de todos los iconos de servicios
   useEffect(() => {
@@ -64,7 +65,8 @@ const Servicios = () => {
                   alt={servicio.title} 
                   loading="lazy"
                   decoding="async"
-                  fetchPriority="low"
+                  // eslint-disable-next-line react/no-unknown-property
+                  fetchpriority="low"
                   width="60" 
                   height="60"
                 />
