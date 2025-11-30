@@ -406,3 +406,20 @@
     font-weight: 600;
   }
 }
+
+/* Pantallas de 1200px o más - número dentro de la cajita */
+@media (min-width: 1200px) {
+  .proceso-step {
+    margin-top: 20px;
+    
+  }
+
+  .proceso-number {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
