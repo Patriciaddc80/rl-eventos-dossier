@@ -203,7 +203,7 @@ const DecoracionFloral = () => {
 
           {/* Botón de consulta */}
           <a 
-            href="https://wa.me/34657092014" 
+            href="https://wa.me/34657092014?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20vuestro%20servicio%20de%20Decoraci%C3%B3n%20Floral.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20centros%20de%20mesa%20y%20rincones%20especiales." 
             className="btn-consultar" 
             target="_blank" 
             rel="noopener noreferrer"

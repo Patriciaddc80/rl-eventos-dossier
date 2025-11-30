@@ -9,7 +9,8 @@ const Packs = () => {
         'Supervisión de proveedores',
         'Control de tiempos'
       ],
-      featured: false
+      featured: false,
+      whatsappMessage: 'Hola%2C%20me%20interesa%20el%20Pack%20B%C3%A1sico.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20y%20precios.'
     },
     {
       title: 'Pack Completo',
@@ -20,7 +21,8 @@ const Packs = () => {
         '2 Rincones especiales',
         'Decoración Floral'
       ],
-      featured: false
+      featured: false,
+      whatsappMessage: 'Hola%2C%20me%20interesa%20el%20Pack%20Completo.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20y%20precios.'
     },
     {
       title: 'Pack Premium',
@@ -30,7 +32,8 @@ const Packs = () => {
         'Noche para novios Deluxe',
         'Decoración Floral'
       ],
-      featured: true
+      featured: true,
+      whatsappMessage: 'Hola%2C%20me%20interesa%20el%20Pack%20Premium.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20y%20precios.'
     }
   ]
 
@@ -62,7 +65,7 @@ const Packs = () => {
                   ))}
                 </ul>
                 <a 
-                  href="https://wa.me/34657092014" 
+                  href={`https://wa.me/34657092014?text=${pack.whatsappMessage}`}
                   className="price-tag-inline consultar-btn" 
                   target="_blank" 
                   rel="noopener noreferrer"

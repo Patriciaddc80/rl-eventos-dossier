@@ -27,7 +27,7 @@ const Precios = () => {
               <li>Control de presupuesto</li>
             </ul>
             <a 
-              href="https://wa.me/34657092014" 
+              href="https://wa.me/34657092014?text=Hola%2C%20me%20interesa%20el%20Servicio%20Integral.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20y%20precios." 
               className="btn-consultar" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -56,7 +56,7 @@ const Precios = () => {
             </p>
             
             <a 
-              href="https://wa.me/34657092014" 
+              href="https://wa.me/34657092014?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Asesoramiento%20y%20Coordinaci%C3%B3n%20del%20D%C3%ADa%20B.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." 
               className="btn-consultar" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -82,7 +82,7 @@ const Precios = () => {
               A tres meses de la boda, comenzamos a poner en marcha todos los preparativos: Elaboramos un cronograma detallado para que cada momento sea verdaderamente mágico.
             </p>
             <a 
-              href="https://wa.me/34657092014" 
+              href="https://wa.me/34657092014?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Coordinaci%C3%B3n%20del%20D%C3%ADa%20B.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios." 
               className="btn-consultar" 
               target="_blank" 
               rel="noopener noreferrer"
