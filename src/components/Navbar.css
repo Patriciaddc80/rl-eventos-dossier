@@ -150,6 +150,9 @@
   justify-content: center;
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
+  width: 50%;
+  min-width: 250px;
+  margin: 0 auto;
   background: linear-gradient(135deg, rgba(212, 184, 150, 0.25) 0%, rgba(212, 184, 150, 0.15) 100%);
   border: 2px solid var(--color-primary);
   border-radius: 12px;
@@ -178,7 +181,7 @@
 /* Redes sociales en el menú */
 .nav-menu-social-item {
   margin-top: var(--spacing-md);
-  padding-top: var(--spacing-md);
+  padding-top: calc(var(--spacing-md) - 14px);
   border-top: 1px solid rgba(212, 184, 150, 0.2);
 }
 
