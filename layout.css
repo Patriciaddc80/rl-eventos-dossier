@@ -86,6 +86,10 @@
   background: var(--color-primary);
 }
 
+.hamburger.active span {
+  background: var(--color-primary);
+}
+
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(8px, 8px);
 }
