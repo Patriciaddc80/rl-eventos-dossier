@@ -113,7 +113,7 @@
 .nav-menu-logo-item {
   display: flex;
   justify-content: center;
-  padding: var(--spacing-md) 0;
+  padding: 0 0 var(--spacing-sm) 0;
   border-bottom: 1px solid rgba(212, 184, 150, 0.2);
   margin-bottom: var(--spacing-sm);
 }
