@@ -121,7 +121,7 @@ const Navbar = () => {
         </div>
         
         <button 
-          className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+          className={`hamburger ${isMenuOpen ? 'active' : ''} ${isScrolled ? 'scrolled' : ''}`}
           id="hamburger"
           aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={isMenuOpen}
